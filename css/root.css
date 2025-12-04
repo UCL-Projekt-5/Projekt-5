@@ -184,6 +184,15 @@ img {
   display: block;
 }
 
+button {
+  color: none;
+  border: none;
+  font-family: var(--font-nunito);
+  font-weight: var(--fw-nunito-regular);
+  font-size: var(--fs-body);
+  line-height: var(--line-height-auto);
+}
+
 .btn {
   display: inline-flex;
   flex-direction: column;
