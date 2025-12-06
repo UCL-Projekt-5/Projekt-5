@@ -38,6 +38,7 @@ let currentIndex = 0;
 const reviewBox = document.getElementById("reviewBox");
 const btnLeft = document.getElementById("btnLeft");
 const btnRight = document.getElementById("btnRight");
+const dots = document.getElementsByClassName("dot");
 
 // 4. eventlisteners til knapperne
 // Når man klikker på højre pil, skal næste anmeldelse vises.
@@ -47,12 +48,20 @@ btnLeft.addEventListener("click", previousReview);
 
 // 5. Her laver vi en funktion, der opdaterer indholdet i reviewBox
 function updateReviewBox() {
-	const review = reviews[currentIndex];
+	const review = reviews[currentIndex]; //lokal vaiabel her.
 	reviewBox.innerHTML = `
 		<div class="review-text">${review.text}</div> 
     <div class="review-name">${review.name}</div>
     <div class="review-time">${review.time}</div>
 	`; //$ får programmet til at forstå, at det skal hente noget fra en variabel og ikke bare skrive det som tekst.
+
+	// Opdater dots
+	for (let i = 0; i < dots.length; i++) {
+		// går igennem alle prikkerne og fjerne active class fra dem alle.
+		dots[i].classList.remove("active");
+	}
+	// Tilføj "active" til den rigtige dot
+	dots[currentIndex].classList.add("active");
 }
 
 // 6. Funktion til at vise den næste anmeldelse.
@@ -72,6 +81,14 @@ function previousReview() {
 		currentIndex = 3;
 	}
 	updateReviewBox();
+}
+
+// 8. Klik på dots (for-loop!)
+for (let i = 0; i < dots.length; i++) {
+	dots[i].addEventListener("click", function () {
+		currentIndex = i; // spring direkte til valgt anmeldelse
+		showReview(currentIndex);
+	});
 }
 
 updateReviewBox();
