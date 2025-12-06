@@ -126,3 +126,8 @@ section {
 	transform: translate(-50%, -50%);
 	color: var(--color-primary);
 }
+
+.btnArrow {
+	height: 30px;
+	width: 30px;
+}
