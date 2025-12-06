@@ -1,106 +1,108 @@
 /* Header */
 header {
-  display: flex;
-  width: 100%;
-  padding: var(--gap-s) var(--gap-m);
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-secondary);
-  z-index: 10;
+	display: flex;
+	width: 100%;
+	padding: var(--gap-s) var(--gap-m);
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-secondary);
+	z-index: 10;
 }
 
 .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 64px;
 }
 
 .site-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 64px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 64px;
 }
 
 /* Footer */
 footer {
-  display: flex;
-  width: 100%;
-  padding: var(--gap-m);
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 32px;
-  background: var(--color-secondary);
-  z-index: 10;
+	display: flex;
+	width: 100%;
+	padding: var(--gap-m);
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 32px;
+	background: var(--color-secondary);
+	z-index: 10;
 }
 
 .contact-main {
-  display: flex;
-  flex-flow: row;
+	display: flex;
+	flex-flow: row;
 }
 
 .flexRow {
-  display: flex;
-  flex-flow: row;
-  gap: var(--gap-m);
+	display: flex;
+	flex-flow: row;
+	gap: var(--gap-m);
 }
 
 section {
-  display: flex;
-  flex-flow: row;
+	display: flex;
+	flex-flow: row;
 }
 
 .leftSide,
 .rightSide {
-  width: 100%;
+	width: 100%;
 }
 
+/* Anmeldelser */
 .arrowRight {
-  rotate: 90deg;
+	rotate: 90deg;
 }
 .arrowLeft {
-  rotate: -90deg;
+	rotate: -90deg;
 }
 
 .reviewBox {
-  display: flex;
-  min-width: 300px;
-  padding: 32px;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
-  background: #fff;
-  box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
+	display: flex;
+	min-width: 300px;
+	padding: 32px;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	align-self: stretch;
+	background: #fff;
+	box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
 }
 
 .reviewContainer {
-  gap: var(--gap-s);
+	gap: var(--gap-s);
 }
 
+/* Hero image section */
 .hero-image {
-  width: 100%;
+	width: 100%;
 
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  min-height: 600px;
-  height: 600px;
+	/* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	min-height: 600px;
+	height: 600px;
 
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 
 /* Place text in the middle of the image */
 .hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--color-primary);
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-primary);
 }
