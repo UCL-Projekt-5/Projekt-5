@@ -50,9 +50,9 @@ btnLeft.addEventListener("click", previousReview);
 function updateReviewBox() {
 	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
-		<div class="review-text">${review.text}</div> 
-    <div class="review-name">${review.name}</div>
-    <div class="review-time">${review.time}</div>
+		<p class="review-text">${review.text}</p> 
+    <b class="review-name">${review.name}</b>
+    <p class="review-time">${review.time}</p>
 	`; //$ får programmet til at forstå, at det skal hente noget fra en variabel og ikke bare skrive det som tekst.
 
 	// Opdater dots
