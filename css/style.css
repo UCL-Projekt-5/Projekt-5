@@ -81,6 +81,26 @@ section {
 	gap: var(--gap-s);
 }
 
+.dotsContainer {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.dot {
+	height: 12px;
+	width: 12px;
+	background-color: #cfcfcf;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dot.active {
+	background-color: var(--color-accent);
+}
+
 /* Hero image section */
 .hero-image {
 	width: 100%;
