@@ -36,11 +36,7 @@ const btnLeft = document.getElementById("btnLeft");
 const btnRight = document.getElementById("btnRight");
 const dots = document.getElementsByClassName("dot");
 
-// 4. eventlisteners til knapperne
-btnRight.addEventListener("click", nextReview);
-btnLeft.addEventListener("click", previousReview);
-
-// 5.  Funktion til at opdatere anmeldelsesboksen
+// 4. Funktion til at opdatere anmeldelsesboksen
 function updateReviewBox() {
 	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
@@ -73,6 +69,10 @@ function previousReview() {
 	}
 	updateReviewBox();
 }
+
+// 4. eventlisteners til knapperne
+btnRight.addEventListener("click", nextReview);
+btnLeft.addEventListener("click", previousReview);
 
 // 8. Eventlisteners til prikkerne
 for (let i = 0; i < dots.length; i++) {
