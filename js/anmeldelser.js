@@ -4,8 +4,6 @@
 // ------------------------------------------ //
 
 // 1. Array med anmeldelser (objekter)
-// Et array er en liste.
-// Hver anmeldelse er et objekt med tekst, navn og tidspunkt.
 const reviews = [
 	{
 		text: "Vi havde en helt fantastisk weekend hos Bibi! Teltene var hyggelige og klang var spot on!",
@@ -29,61 +27,54 @@ const reviews = [
 	},
 ];
 
-// 2. Variabel til at holde styr på hvilken anmeldelse der vises
-// currentIndex fortæller hvilket nummer i arrayet vi er på.
-// 0 = første anmeldelse, 1 = anden anmeldelse osv.
+// 2. Variabel til at holde styr på den aktuelle anmeldelse
 let currentIndex = 0;
 
-// 3. Henter elementer fra DOM
+// 3. Hent HTML-elementer
 const reviewBox = document.getElementById("reviewBox");
 const btnLeft = document.getElementById("btnLeft");
 const btnRight = document.getElementById("btnRight");
 const dots = document.getElementsByClassName("dot");
 
 // 4. eventlisteners til knapperne
-// Når man klikker på højre pil, skal næste anmeldelse vises.
-// Når man klikker på venstre pil, skal forrige anmeldelse vises.
 btnRight.addEventListener("click", nextReview);
 btnLeft.addEventListener("click", previousReview);
 
-// 5. Her laver vi en funktion, der opdaterer indholdet i reviewBox
+// 5.  Funktion til at opdatere anmeldelsesboksen
 function updateReviewBox() {
 	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
 		<p class="review-text">${review.text}</p> 
     <b class="review-name">${review.name}</b>
     <p class="review-time">${review.time}</p>
-	`; //$ får programmet til at forstå, at det skal hente noget fra en variabel og ikke bare skrive det som tekst.
-
-	// Opdater dots
+	`;
 	for (let i = 0; i < dots.length; i++) {
-		// går igennem alle prikkerne og fjerne active class fra dem alle.
 		dots[i].classList.remove("active");
 	}
-	// Tilføjer active class til den prik, der svarer til currentIndex.
+
 	dots[currentIndex].classList.add("active");
 }
 
 // 6. Funktion til at vise den næste anmeldelse.
 function nextReview() {
-	currentIndex++; // Her lægger vi 1 til currentIndex, så vi går én anmeldelse frem.
+	currentIndex++;
 	if (currentIndex >= reviews.length) {
 		// Større eller lig med 4
 		currentIndex = 0;
 	}
-	updateReviewBox(); // Opdaterer indholdet i reviewBox. Uden denne, så kommer der ikke ny tekst frem.
+	updateReviewBox();
 }
 
 // 7. Funktion til at vise den forrige anmeldelse.
 function previousReview() {
-	currentIndex--; // Her trækker vi 1 fra currentIndex, så vi går én anmeldelse tilbage.
+	currentIndex--;
 	if (currentIndex < 0) {
 		currentIndex = 3;
 	}
 	updateReviewBox();
 }
 
-// 8. Klik på dots (for-loop!)
+// 8. Eventlisteners til prikkerne
 for (let i = 0; i < dots.length; i++) {
 	dots[i].addEventListener("click", function () {
 		currentIndex = i; // spring direkte til valgt anmeldelse
