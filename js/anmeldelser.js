@@ -51,7 +51,7 @@ function updateReviewBox() {
 	dots[currentIndex].classList.add("active");
 }
 
-// 6. Funktion til at vise den næste anmeldelse.
+// 5. Funktion til at vise den næste anmeldelse.
 function nextReview() {
 	currentIndex++;
 	if (currentIndex >= reviews.length) {
@@ -61,7 +61,7 @@ function nextReview() {
 	updateReviewBox();
 }
 
-// 7. Funktion til at vise den forrige anmeldelse.
+// 6. Funktion til at vise den forrige anmeldelse.
 function previousReview() {
 	currentIndex--;
 	if (currentIndex < 0) {
@@ -70,7 +70,7 @@ function previousReview() {
 	updateReviewBox();
 }
 
-// 4. eventlisteners til knapperne
+// 7. eventlisteners til knapperne
 btnRight.addEventListener("click", nextReview);
 btnLeft.addEventListener("click", previousReview);
 
