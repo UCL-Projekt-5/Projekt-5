@@ -48,7 +48,7 @@ btnLeft.addEventListener("click", previousReview);
 
 // 5. Her laver vi en funktion, der opdaterer indholdet i reviewBox
 function updateReviewBox() {
-	const review = reviews[currentIndex]; //lokal vaiabel her.
+	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
 		<div class="review-text">${review.text}</div> 
     <div class="review-name">${review.name}</div>
@@ -60,13 +60,13 @@ function updateReviewBox() {
 		// går igennem alle prikkerne og fjerne active class fra dem alle.
 		dots[i].classList.remove("active");
 	}
-	// Tilføj "active" til den rigtige dot
+	// Tilføjer active class til den prik, der svarer til currentIndex.
 	dots[currentIndex].classList.add("active");
 }
 
 // 6. Funktion til at vise den næste anmeldelse.
 function nextReview() {
-	currentIndex++; // Her lægger vi 1 til currentIndex, så vi går én anmeldese frem.
+	currentIndex++; // Her lægger vi 1 til currentIndex, så vi går én anmeldelse frem.
 	if (currentIndex >= reviews.length) {
 		// Større eller lig med 4
 		currentIndex = 0;
@@ -76,7 +76,7 @@ function nextReview() {
 
 // 7. Funktion til at vise den forrige anmeldelse.
 function previousReview() {
-	currentIndex--; // Her trækker vi 1 fra currentIndex, så vi går én anmeldese tilbae.
+	currentIndex--; // Her trækker vi 1 fra currentIndex, så vi går én anmeldelse tilbage.
 	if (currentIndex < 0) {
 		currentIndex = 3;
 	}
@@ -87,7 +87,7 @@ function previousReview() {
 for (let i = 0; i < dots.length; i++) {
 	dots[i].addEventListener("click", function () {
 		currentIndex = i; // spring direkte til valgt anmeldelse
-		showReview(currentIndex);
+		updateReviewBox();
 	});
 }
 
