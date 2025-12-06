@@ -3,7 +3,7 @@
 //                Josefine                    //
 // ------------------------------------------ //
 
-//  Array med anmeldelser (objekter)
+// 1. Array med anmeldelser (objekter)
 // Et array er en liste.
 // Hver anmeldelse er et objekt med tekst, navn og tidspunkt.
 const reviews = [
@@ -45,17 +45,27 @@ const btnRight = document.getElementById("btnRight");
 btnRight.addEventListener("click", nextReview);
 btnLeft.addEventListener("click", previousReview);
 
-// 5. Funktion til at vise den næste anmeldelse.
+// 5. Her laver vi en funktion, der opdaterer indholdet i reviewBox
+function updateReviewBox() {
+	const review = reviews[currentIndex];
+	reviewBox.innerHTML = `
+		<div class="review-text">${review.text}</div> 
+    <div class="review-name">${review.name}</div>
+    <div class="review-time">${review.time}</div>
+	`; //$ får programmet til at forstå, at det skal hente noget fra en variabel og ikke bare skrive det som tekst.
+}
+
+// 6. Funktion til at vise den næste anmeldelse.
 function nextReview() {
 	currentIndex++; // Her lægger vi 1 til currentIndex, så vi går én anmeldese frem.
 	if (currentIndex >= reviews.length) {
 		// Større eller lig med 4
 		currentIndex = 0;
 	}
-	updateReviewBox();
+	updateReviewBox(); // Opdaterer indholdet i reviewBox. Uden denne, så kommer der ikke ny tekst frem.
 }
 
-// 6. Funktion til at vise den forrige anmeldelse.
+// 7. Funktion til at vise den forrige anmeldelse.
 function previousReview() {
 	currentIndex--; // Her trækker vi 1 fra currentIndex, så vi går én anmeldese tilbae.
 	if (currentIndex < 0) {
@@ -64,7 +74,4 @@ function previousReview() {
 	updateReviewBox();
 }
 
-// 7. Her laver vi en funktion, der opdaterer indholdet i reviewBox
-function updateReviewBox() {
-	const review = reviews[currentIndex];
-}
+updateReviewBox();
