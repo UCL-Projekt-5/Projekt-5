@@ -10,8 +10,7 @@ Husk at lave rem i Figma til skriftstørrelser
   /* Colors */
   --color-primary: #fcf7f3;
   --color-secondary: #b9ae9f;
-  --color-accent: #90a39f;
-  --color-cta: #85a2a6;
+  --color-accent: #85a2a6;
   --color-text: #0f0e0e;
   --color-blue: #468da6;
   --color-green: #327150;
@@ -62,6 +61,8 @@ Husk at lave rem i Figma til skriftstørrelser
 
   /* Border Width */
   --border-width-default: 1px;
+
+  --text-max-width-desktop: 512px;
 }
 
 * {
@@ -86,6 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -132,14 +134,12 @@ p {
 @media (min-width: 768px) {
   /* Gaps - Desktop (px) */
   :root {
-    --gap-xxs: 8px;
-    --gap-xs: 16px;
+    --gap-xs: 8px;
     --gap-s: 16px;
     --gap-m: 32px;
     --gap-l: 64px;
-    --gap-xl: 96px;
-    --gap-xxl: 128px;
-    --gap-xxxl: 256px;
+    --gap-xl: 128px;
+    --gap-xxl: 256px;
 
     /* Font Sizes - Desktop (rem) */
     --fs-h1: 2rem; /* 32px */
@@ -168,6 +168,9 @@ p {
   .caption {
     font-size: var(--fs-caption);
   }
+  p {
+    max-width: var(--text-max-width-desktop);
+  }
 }
 
 a {
@@ -182,6 +185,13 @@ ul {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 button {
@@ -208,21 +218,23 @@ button {
 }
 .btn-small {
   max-width: 200px;
-
-  padding: 8px 32px;
+  padding: var(--gap-xs) var(--gap-m);
 }
 .btn-primary {
-  background: var(--color-cta);
-  color: var(--color-text);
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
 .btn-secondary {
   background: transparent;
   color: var(--color-text);
-  border: 1px solid var(--Accent, #90a39f);
+  border: 1px solid var(--color-accent);
 }
 
-.btn:hover {
-  background: var(--Accent, #90a39f);
+.btn-primary:hover {
+  background: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background: var(--color-accent);
 }
 
 main {
@@ -237,4 +249,16 @@ main {
 
 .accent {
   color: var(--color-accent);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.earth {
+  color: var(--color-earth);
 }

@@ -1,0 +1,378 @@
+{
+  "Gap": {
+    "Gap s": {
+      "$type": "number",
+      "$value": 16
+    },
+    "Gap m": {
+      "$type": "number",
+      "$value": 32
+    },
+    "Gap l": {
+      "$type": "number",
+      "$value": 64
+    },
+    "Gap 8": {
+      "$type": "number",
+      "$value": 8
+    },
+    "Gap 16": {
+      "$type": "number",
+      "$value": 16
+    },
+    "Gap 32": {
+      "$type": "number",
+      "$value": 32
+    },
+    "Gap 64": {
+      "$type": "number",
+      "$value": 64
+    },
+    "Gap xxl": {
+      "$type": "number",
+      "$value": 128
+    },
+    "Gap xs": {
+      "$type": "number",
+      "$value": 8
+    },
+    "Gap xxxl": {
+      "$type": "number",
+      "$value": 256
+    },
+    "Gap xl": {
+      "$type": "number",
+      "$value": 96
+    }
+  },
+  "text size": {
+    "h1": {
+      "$type": "number",
+      "$value": 32
+    },
+    "h2": {
+      "$type": "number",
+      "$value": 24
+    },
+    "h3": {
+      "$type": "number",
+      "$value": 20
+    },
+    "body": {
+      "$type": "number",
+      "$value": 18
+    },
+    "caption": {
+      "$type": "number",
+      "$value": 16
+    }
+  },
+  "Text with desktop": {
+    "$type": "number",
+    "$value": 512
+  },
+  "Primær": {
+    "$type": "color",
+    "$value": "#fcf7f3"
+  },
+  "Sekundær": {
+    "$type": "color",
+    "$value": "#b9ae9f"
+  },
+  "Accent": {
+    "$type": "color",
+    "$value": "#90a39f"
+  },
+  "CTA knap": {
+    "$type": "color",
+    "$value": "#85a2a6"
+  },
+  "Tekstfarve": {
+    "$type": "color",
+    "$value": "#0f0e0e"
+  },
+  "Blå": {
+    "$type": "color",
+    "$value": "#468da6"
+  },
+  "Grøn": {
+    "$type": "color",
+    "$value": "#327150"
+  },
+  "Jord": {
+    "$type": "color",
+    "$value": "#b15934"
+  },
+  "fontFamilies": {
+    "merriweather": {
+      "$type": "fontFamilies",
+      "$value": "Merriweather"
+    },
+    "nunito": {
+      "$type": "fontFamilies",
+      "$value": "Nunito"
+    }
+  },
+  "lineHeights": {
+    "0": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "1": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "2": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "3": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "4": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "5": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "6": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "7": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    },
+    "8": {
+      "$type": "lineHeights",
+      "$value": "AUTO"
+    }
+  },
+  "fontWeights": {
+    "merriweather-0": {
+      "$type": "fontWeights",
+      "$value": "Bold"
+    },
+    "nunito-1": {
+      "$type": "fontWeights",
+      "$value": "Regular"
+    },
+    "nunito-2": {
+      "$type": "fontWeights",
+      "$value": "Italic"
+    },
+    "nunito-3": {
+      "$type": "fontWeights",
+      "$value": "Bold"
+    }
+  },
+  "fontSize": {
+    "0": {
+      "$type": "fontSizes",
+      "$value": 16
+    },
+    "1": {
+      "$type": "fontSizes",
+      "$value": 18
+    },
+    "2": {
+      "$type": "fontSizes",
+      "$value": 20
+    },
+    "3": {
+      "$type": "fontSizes",
+      "$value": 24
+    },
+    "4": {
+      "$type": "fontSizes",
+      "$value": 32
+    }
+  },
+  "letterSpacing": {
+    "0": {
+      "$type": "letterSpacing",
+      "$value": "0%"
+    }
+  },
+  "paragraphSpacing": {
+    "0": {
+      "$type": "paragraphSpacing",
+      "$value": 0
+    }
+  },
+  "H1": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.merriweather}",
+      "fontWeight": "{fontWeights.merriweather-0}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.4}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "H2": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.merriweather}",
+      "fontWeight": "{fontWeights.merriweather-0}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.3}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "H3": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.merriweather}",
+      "fontWeight": "{fontWeights.merriweather-0}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.2}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "Body": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-1}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.1}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "Body Italic": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-2}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.1}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "Body Bold": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-3}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.1}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "Caption": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-1}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.0}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "Caption Bold": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-3}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.0}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "CTA": {
+    "$type": "typography",
+    "$value": {
+      "fontFamily": "{fontFamilies.nunito}",
+      "fontWeight": "{fontWeights.nunito-3}",
+      "lineHeight": "{lineHeights.0}",
+      "fontSize": "{fontSize.1}",
+      "letterSpacing": "{letterSpacing.0}",
+      "paragraphSpacing": "{paragraphSpacing.0}",
+      "paragraphIndent": "{paragraphIndent.0}",
+      "textCase": "{textCase.none}",
+      "textDecoration": "{textDecoration.none}"
+    }
+  },
+  "textCase": {
+    "none": {
+      "$type": "textCase",
+      "$value": "none"
+    }
+  },
+  "textDecoration": {
+    "none": {
+      "$type": "textDecoration",
+      "$value": "none"
+    }
+  },
+  "paragraphIndent": {
+    "0": {
+      "$type": "dimension",
+      "$value": "0px"
+    }
+  },
+  "none": {
+    "$type": "borderRadius",
+    "$value": "0"
+  },
+  "m": {
+    "$type": "borderRadius",
+    "$value": "10"
+  },
+  "full": {
+    "$type": "borderRadius",
+    "$value": "999"
+  },
+  "Jord lys": {
+    "$type": "color",
+    "$value": "#f2e6de"
+  },
+  "Grøn lys": {
+    "$type": "color",
+    "$value": "#e4e8e0"
+  },
+  "Blå lys": {
+    "$type": "color",
+    "$value": "#e4e9e8"
+  },
+  "n": {
+    "$type": "borderWidth",
+    "$value": "1"
+  }
+}

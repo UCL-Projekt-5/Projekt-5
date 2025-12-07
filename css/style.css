@@ -46,17 +46,38 @@ footer {
   flex-flow: row;
   gap: var(--gap-m);
 }
+.flexCol {
+  display: flex;
+  flex-flow: column;
+  gap: var(--gap-m);
+}
+
+.gapS {
+  gap: var(--gap-s);
+}
+
+.gap8 {
+  gap: 8px;
+}
 
 section {
   display: flex;
   flex-flow: row;
+  gap: var(--gap-l);
+  width: 100%;
 }
 
 .leftSide,
 .rightSide {
   width: 100%;
 }
-
+.hero-fill {
+  background-color: var(--color-secondary);
+  max-height: 200px;
+  padding: var(--gap-l);
+  width: 100%;
+  text-align: center;
+}
 .arrowRight {
   rotate: 90deg;
 }
@@ -83,8 +104,7 @@ section {
 .hero-image {
   width: 100%;
 
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url("/img/img-1.webp");
   min-height: 600px;
   height: 600px;
 
@@ -93,14 +113,121 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 /* Place text in the middle of the image */
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hero-image-text {
+  text-align: left;
   color: var(--color-primary);
+  display: flex;
+  min-width: 100%;
+
+  padding: 0 var(--gap-m);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--gap-s);
+  align-self: stretch;
+  grid-row: 2 / span 1;
+
+  justify-self: start;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+.leftSide {
+  grid-area: left;
+}
+.rightSide {
+  grid-area: right;
+}
+.reviewsSection {
+  display: grid;
+  grid-template-areas: "left right";
+  gap: var(--gap-l);
+}
+
+/* -----Event------ */
+
+/* Styles for AI-generated event cards section (based on Figma)
+   Scoped to `.events-grid` so it doesn't affect other pages. */
+
+.events-grid {
+  display: block;
+  margin-top: var(--gap-l);
+}
+
+.events-grid .event-card {
+  background: transparent;
+
+  overflow: hidden;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--gap-l);
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+}
+
+.event-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card__body {
+  padding: var(--gap-s) 0;
+}
+
+.event-card h3 {
+  font-family: var(--font-merriweather);
+  font-weight: var(--fw-merriweather-bold);
+  font-size: var(--fs-h3);
+  margin-bottom: 8px;
+}
+
+.event-card__body p {
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.event-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-secondary);
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.event-card__date {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.event-card__price {
+  font-weight: 700;
+}
+
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .event-card__image {
+    height: 180px;
+  }
 }
