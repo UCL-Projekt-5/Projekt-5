@@ -2,8 +2,13 @@
 //        KUNDEANMELDELSER KARRUSEL           //
 //                Josefine                    //
 // ------------------------------------------ //
+// 1. Hent HTML-elementer
+const reviewBox = document.getElementById("reviewBox");
+const btnLeft = document.getElementById("btnLeft");
+const btnRight = document.getElementById("btnRight");
+const dots = document.getElementsByClassName("dot");
 
-// 1. Array med anmeldelser (objekter)
+// 2. Array med anmeldelser (objekter)
 const reviews = [
 	{
 		text: "Vi havde en helt fantastisk weekend hos Bibi! Teltene var hyggelige og klang var spot on!",
@@ -27,14 +32,8 @@ const reviews = [
 	},
 ];
 
-// 2. Variabel til at holde styr på den aktuelle anmeldelse
+// 3. Variabel til at holde styr på den aktuelle anmeldelse
 let currentIndex = 0;
-
-// 3. Hent HTML-elementer
-const reviewBox = document.getElementById("reviewBox");
-const btnLeft = document.getElementById("btnLeft");
-const btnRight = document.getElementById("btnRight");
-const dots = document.getElementsByClassName("dot");
 
 // 4. Funktion til at opdatere anmeldelsesboksen
 function updateReviewBox() {
