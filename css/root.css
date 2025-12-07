@@ -83,7 +83,7 @@ body {
   letter-spacing: var(--letter-spacing-0);
   margin: 0;
   padding: 0;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -212,6 +212,7 @@ button {
   height: fit-content;
   width: fit-content;
 }
+
 .btn-big {
   min-width: 250px;
   padding: var(--gap-s) var(--gap-m);
@@ -230,11 +231,42 @@ button {
   border: 1px solid var(--color-accent);
 }
 
+.btn-earth {
+  background: var(--color-earth);
+  color: var(--color-primary);
+}
+
+.btn-blue {
+  background: var(--color-blue);
+  color: var(--color-primary);
+}
+.btn-green {
+  background: var(--color-green);
+  color: var(--color-primary);
+}
+
 .btn-primary:hover {
   background: var(--color-secondary);
 }
 .btn-secondary:hover {
   background: var(--color-accent);
+}
+
+.btn-earth:hover {
+  color: var(--color-text);
+  background: var(--color-earth-light);
+}
+.btn-blue:hover {
+  color: var(--color-text);
+  background: var(--color-blue-light);
+}
+.btn-green:hover {
+  color: var(--color-text);
+  background: var(--color-green-light);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 main {
@@ -245,6 +277,7 @@ main {
   align-items: flex-start;
   gap: var(--gap-l);
   align-self: stretch;
+  background-color: var(--color-primary);
 }
 
 .accent {
@@ -261,4 +294,14 @@ main {
 
 .earth {
   color: var(--color-earth);
+}
+
+.list-earth li::marker {
+  color: var(--color-earth);
+}
+.list-green li::marker {
+  color: var(--color-green);
+}
+.list-blue li::marker {
+  color: var(--color-blue);
 }
