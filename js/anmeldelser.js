@@ -54,7 +54,7 @@ function updateReviewBox() {
 function nextReview() {
 	currentIndex++;
 	if (currentIndex >= reviews.length) {
-		// Større eller lig med 4
+		// Større eller lig med antal anmeldelser
 		currentIndex = 0;
 	}
 	updateReviewBox();
