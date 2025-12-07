@@ -35,7 +35,7 @@ const reviews = [
 // 3. Variabel til at holde styr på den aktuelle anmeldelse
 let currentIndex = 0;
 
-// 4. Funktion til at opdatere anmeldelsesboksen
+// 4. Funktion til at opdatere/vise anmeldelsesboksen
 function updateReviewBox() {
 	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
