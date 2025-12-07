@@ -64,7 +64,7 @@ function nextReview() {
 function previousReview() {
 	currentIndex--;
 	if (currentIndex < 0) {
-		currentIndex = 3;
+		currentIndex = reviews.length - 1;
 	}
 	updateReviewBox();
 }
