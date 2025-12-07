@@ -36,6 +36,7 @@ const reviews = [
 let currentIndex = 0;
 
 // 4. Funktion til at opdatere/vise anmeldelsesboksen
+// Note: Dollartegn og backticks bruges til template literals, så JavaScript kan indsætte variabler direkte i teksten. Dette er anvendt efter vejledning fra gruppemedlem Tiffany.
 function updateReviewBox() {
 	const review = reviews[currentIndex]; //lokal variabel her.
 	reviewBox.innerHTML = `
