@@ -405,8 +405,6 @@ section {
   margin-bottom: var(--gap-m);
 }
 
-
-
 @media (max-width: 1024px) {
   .prices-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -430,3 +428,6 @@ section {
   }
 }
 
+.inactive {
+  color: var(--color-secondary);
+}
