@@ -198,17 +198,17 @@
   justify-content: center;
   border-radius: var(--radius-m);
 }
-.tent-badge--earth {
-  background: var(--color-earth-light);
-  color: var(--color-earth);
+.tent-badge--terra {
+  background: var(--color-terra-light);
+  color: var(--color-terra);
 }
-.tent-badge--green {
-  background: var(--color-green-light);
-  color: var(--color-green);
+.tent-badge--silva {
+  background: var(--color-silva-light);
+  color: var(--color-silva);
 }
-.tent-badge--blue {
-  background: var(--color-blue-light);
-  color: var(--color-blue);
+.tent-badge--aqua {
+  background: var(--color-aqua-light);
+  color: var(--color-aqua);
 }
 
 .tent-features {
@@ -224,16 +224,16 @@
   display: flex;
   gap: var(--gap-m);
 }
-.price-box--earth {
-  border-left: 3px solid var(--color-earth);
+.price-box--terra {
+  border-left: 3px solid var(--color-terra);
   padding-left: 12px;
 }
-.price-box--green {
-  border-left: 3px solid var(--color-green);
+.price-box--silva {
+  border-left: 3px solid var(--color-silva);
   padding-left: 12px;
 }
-.price-box--blue {
-  border-left: 3px solid var(--color-blue);
+.price-box--aqua {
+  border-left: 3px solid var(--color-aqua);
   padding-left: 12px;
 }
 
@@ -271,7 +271,6 @@
   }
 }
 
-/* Included amenities section */
 .included-section {
   text-align: center;
   align-items: center;
@@ -297,7 +296,7 @@
   background: #fff;
 }
 .include-icon-container {
-  background: var(--color-blue-light);
+  background: var(--color-aqua-light);
   padding: var(--gap-s);
   border-radius: var(--radius-m);
 }
@@ -307,23 +306,6 @@
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .included-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .included-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 420px) {
-  .included-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Prices section */
 .prices-section {
   text-align: center;
   gap: var(--gap-s);
@@ -349,29 +331,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-l);
-}
-
-@media (max-width: 1024px) {
-  .prices-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .tent-container {
-    grid-template-columns: 1fr 320px;
-  }
-}
-@media (max-width: 768px) {
-  .prices-grid {
-    grid-template-columns: 1fr;
-  }
-  .tent-container {
-    grid-template-columns: 1fr;
-  }
-  .tent-right {
-    order: -1;
-  }
-  .tent-right .gallery-main img {
-    height: 200px;
-  }
 }
 
 .inactive {
@@ -468,19 +427,28 @@
   transform: scale(0.95);
 }
 
+.bookTentContainer:active {
+  transform: scale(0.9);
+}
+
 #bookAquaTent:hover {
-  background-color: var(--color-blue-light);
-  outline: 8px solid var(--color-blue-light);
+  background-color: var(--color-aqua-light);
+  outline: 8px solid var(--color-aqua-light);
 }
 
 #bookTerraTent:hover {
-  background-color: var(--color-green-light);
-  outline: 8px solid var(--color-green-light);
+  background-color: var(--color-silva-light);
+  outline: 8px solid var(--color-silva-light);
 }
 
 #bookSilvaTent:hover {
-  background-color: var(--color-earth-light);
-  outline: 8px solid var(--color-earth-light);
+  background-color: var(--color-terra-light);
+  outline: 8px solid var(--color-terra-light);
+}
+
+.active {
+  background-color: #f0f0f0;
+  outline: 8px solid #f0f0f0;
 }
 
 .bookingImg {
@@ -503,7 +471,7 @@
 }
 
 .form-row {
-  margin-bottom: var(--gap-m);
+  margin-bottom: var(--gap-s);
   display: flex;
   flex-direction: column;
 }
@@ -523,7 +491,7 @@
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--gap-m);
+  gap: var(--gap-s);
   justify-items: center;
 }
 
@@ -546,7 +514,7 @@
 }
 
 .booking-summary .summary-card {
-  background: var(--color-blue-light);
+  background: var(--color-aqua-light);
   padding: var(--gap-m);
   text-align: left;
 }

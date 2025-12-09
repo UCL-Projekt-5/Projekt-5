@@ -12,12 +12,12 @@ Husk at lave rem i Figma til skriftstørrelser
   --color-secondary: #b9ae9f;
   --color-accent: #85a2a6;
   --color-text: #0f0e0e;
-  --color-blue: #468da6;
-  --color-green: #327150;
-  --color-earth: #b15934;
-  --color-blue-light: #e4e9e8;
-  --color-green-light: #e4e8e0;
-  --color-earth-light: #f2e6de;
+  --color-aqua: #468da6;
+  --color-silva: #327150;
+  --color-terra: #b15934;
+  --color-aqua-light: #e4e9e8;
+  --color-silva-light: #e4e8e0;
+  --color-terra-light: #f2e6de;
 
   /* Font Families */
   --font-merriweather: "Merriweather", serif;
@@ -216,8 +216,6 @@ button {
   width: fit-content;
 }
 
-
-
 .btn-big {
   min-width: 250px;
   padding: var(--gap-s) var(--gap-m);
@@ -236,17 +234,17 @@ button {
   border: 1px solid var(--color-accent);
 }
 
-.btn-earth {
-  background: var(--color-earth);
+.btn-terra {
+  background: var(--color-terra);
   color: var(--color-primary);
 }
 
-.btn-blue {
-  background: var(--color-blue);
+.btn-aqua {
+  background: var(--color-aqua);
   color: var(--color-primary);
 }
-.btn-green {
-  background: var(--color-green);
+.btn-silva {
+  background: var(--color-silva);
   color: var(--color-primary);
 }
 
@@ -257,17 +255,17 @@ button {
   background: var(--color-accent);
 }
 
-.btn-earth:hover {
+.btn-terra:hover {
   color: var(--color-text);
-  background: var(--color-earth-light);
+  background: var(--color-terra-light);
 }
-.btn-blue:hover {
+.btn-aqua:hover {
   color: var(--color-text);
-  background: var(--color-blue-light);
+  background: var(--color-aqua-light);
 }
-.btn-green:hover {
+.btn-silva:hover {
   color: var(--color-text);
-  background: var(--color-green-light);
+  background: var(--color-silva-light);
 }
 .btnBook:hover {
   background-color: var(--color-primary);
@@ -301,26 +299,26 @@ main {
   background-color: var(--color-accent);
 }
 
-.blue {
-  color: var(--color-blue);
+.aqua {
+  color: var(--color-aqua);
 }
 
-.green {
-  color: var(--color-green);
+.silva {
+  color: var(--color-silva);
 }
 
-.earth {
-  color: var(--color-earth);
+.terra {
+  color: var(--color-terra);
 }
 
-.list-earth li::marker {
-  color: var(--color-earth);
+.list-terra li::marker {
+  color: var(--color-terra);
 }
-.list-green li::marker {
-  color: var(--color-green);
+.list-silva li::marker {
+  color: var(--color-silva);
 }
-.list-blue li::marker {
-  color: var(--color-blue);
+.list-aqua li::marker {
+  color: var(--color-aqua);
 }
 
 .flexRow {
