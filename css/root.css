@@ -7,61 +7,62 @@ Husk at lave rem i Figma til skriftstørrelser
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
-	/* Colors */
-	--color-primary: #fcf7f3;
-	--color-secondary: #b9ae9f;
-	--color-accent: #90a39f;
-	--color-cta: #85a2a6;
-	--color-text: #0f0e0e;
-	--color-blue: #468da6;
-	--color-green: #327150;
-	--color-earth: #b15934;
-	--color-blue-light: #e4e9e8;
-	--color-green-light: #e4e8e0;
-	--color-earth-light: #f2e6de;
+  /* Colors */
+  --color-primary: #fcf7f3;
+  --color-secondary: #b9ae9f;
+  --color-accent: #85a2a6;
+  --color-text: #0f0e0e;
+  --color-blue: #468da6;
+  --color-green: #327150;
+  --color-earth: #b15934;
+  --color-blue-light: #e4e9e8;
+  --color-green-light: #e4e8e0;
+  --color-earth-light: #f2e6de;
 
-	/* Font Families */
-	--font-merriweather: "Merriweather", serif;
-	--font-nunito: "Nunito", sans-serif;
+  /* Font Families */
+  --font-merriweather: "Merriweather", serif;
+  --font-nunito: "Nunito", sans-serif;
 
-	/* Font Weights */
-	--fw-merriweather-bold: 700;
-	--fw-nunito-regular: 400;
-	--fw-nunito-italic: 400;
-	--fw-nunito-bold: 700;
+  /* Font Weights */
+  --fw-merriweather-bold: 700;
+  --fw-nunito-regular: 400;
+  --fw-nunito-italic: 400;
+  --fw-nunito-bold: 700;
 
-	/* Gaps - Mobile (px) */
-	--gap-xs: 4px;
-	--gap-s: 8px;
-	--gap-m: 16px;
-	--gap-l: 32px;
-	--gap-xl: 64px;
-	--gap-xxl: 128px;
+  /* Gaps - Mobile (px) */
+  --gap-xs: 4px;
+  --gap-s: 8px;
+  --gap-m: 16px;
+  --gap-l: 32px;
+  --gap-xl: 64px;
+  --gap-xxl: 128px;
 
-	/* Font Sizes - Mobile (rem) */
-	--fs-h1: 1.25rem; /* 20px */
-	--fs-h2: 1.125rem; /* 18px */
-	--fs-h3: 1rem; /* 16px */
-	--fs-body: 1rem; /* 16px */
-	--fs-caption: 0.875rem; /* 14px */
+  /* Font Sizes - Mobile (rem) */
+  --fs-h1: 1.25rem; /* 20px */
+  --fs-h2: 1.125rem; /* 18px */
+  --fs-h3: 1rem; /* 16px */
+  --fs-body: 1rem; /* 16px */
+  --fs-caption: 0.875rem; /* 14px */
 
-	/* Line Heights */
-	--line-height-auto: normal;
+  /* Line Heights */
+  --line-height-auto: normal;
 
-	/* Letter Spacing */
-	--letter-spacing-0: 0;
+  /* Letter Spacing */
+  --letter-spacing-0: 0;
 
-	/* Paragraph Spacing & Indent */
-	--paragraph-spacing-0: 0;
-	--paragraph-indent-0: 0;
+  /* Paragraph Spacing & Indent */
+  --paragraph-spacing-0: 0;
+  --paragraph-indent-0: 0;
 
-	/* Border Radius */
-	--radius-none: 0px;
-	--radius-m: 10px;
-	--radius-full: 999px;
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-m: 10px;
+  --radius-full: 999px;
 
-	/* Border Width */
-	--border-width-default: 1px;
+  /* Border Width */
+  --border-width-default: 1px;
+
+  --text-max-width-desktop: 512px;
 }
 
 * {
@@ -74,18 +75,19 @@ body {
 
 /* Mobile-first Typografi */
 body {
-	font-family: var(--font-nunito);
-	font-weight: var(--fw-nunito-regular);
-	font-size: var(--fs-body);
-	line-height: var(--line-height-auto);
-	color: var(--color-text);
-	letter-spacing: var(--letter-spacing-0);
-	margin: 0;
-	padding: 0;
-	background-color: var(--color-primary);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  font-family: var(--font-nunito);
+  font-weight: var(--fw-nunito-regular);
+  font-size: var(--fs-body);
+  line-height: var(--line-height-auto);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-0);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -130,44 +132,45 @@ p {
 
 /* Desktop overrides */
 @media (min-width: 768px) {
-	/* Gaps - Desktop (px) */
-	:root {
-		--gap-xxs: 8px;
-		--gap-xs: 16px;
-		--gap-s: 16px;
-		--gap-m: 32px;
-		--gap-l: 64px;
-		--gap-xl: 96px;
-		--gap-xxl: 128px;
-		--gap-xxxl: 256px;
+  /* Gaps - Desktop (px) */
+  :root {
+    --gap-xs: 8px;
+    --gap-s: 16px;
+    --gap-m: 32px;
+    --gap-l: 64px;
+    --gap-xl: 128px;
+    --gap-xxl: 256px;
 
-		/* Font Sizes - Desktop (rem) */
-		--fs-h1: 2rem; /* 32px */
-		--fs-h2: 1.5rem; /* 24px */
-		--fs-h3: 1.25rem; /* 20px */
-		--fs-body: 1.125rem; /* 18px */
-		--fs-caption: 1rem; /* 16px */
-	}
+    /* Font Sizes - Desktop (rem) */
+    --fs-h1: 2rem; /* 32px */
+    --fs-h2: 1.5rem; /* 24px */
+    --fs-h3: 1.25rem; /* 20px */
+    --fs-body: 1.125rem; /* 18px */
+    --fs-caption: 1rem; /* 16px */
+  }
 
-	h1 {
-		font-size: var(--fs-h1);
-	}
+  h1 {
+    font-size: var(--fs-h1);
+  }
 
-	h2 {
-		font-size: var(--fs-h2);
-	}
+  h2 {
+    font-size: var(--fs-h2);
+  }
 
-	h3 {
-		font-size: var(--fs-h3);
-	}
+  h3 {
+    font-size: var(--fs-h3);
+  }
 
-	body {
-		font-size: var(--fs-body);
-	}
+  body {
+    font-size: var(--fs-body);
+  }
 
-	.caption {
-		font-size: var(--fs-caption);
-	}
+  .caption {
+    font-size: var(--fs-caption);
+  }
+  p {
+    max-width: var(--text-max-width-desktop);
+  }
 }
 
 a {
@@ -180,8 +183,15 @@ ul {
 }
 
 img {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 button {
@@ -202,39 +212,96 @@ button {
 	height: fit-content;
 	width: fit-content;
 }
+
 .btn-big {
 	min-width: 250px;
 	padding: var(--gap-s) var(--gap-m);
 }
 .btn-small {
-	max-width: 200px;
-
-	padding: 8px 32px;
+  max-width: 200px;
+  padding: var(--gap-xs) var(--gap-m);
 }
 .btn-primary {
-	background: var(--color-cta);
-	color: var(--color-text);
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
 .btn-secondary {
-	background: transparent;
-	color: var(--color-text);
-	border: 1px solid var(--Accent, #90a39f);
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-accent);
 }
 
-.btn:hover {
-	background: var(--Accent, #90a39f);
+.btn-earth {
+  background: var(--color-earth);
+  color: var(--color-primary);
+}
+
+.btn-blue {
+  background: var(--color-blue);
+  color: var(--color-primary);
+}
+.btn-green {
+  background: var(--color-green);
+  color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background: var(--color-accent);
+}
+
+.btn-earth:hover {
+  color: var(--color-text);
+  background: var(--color-earth-light);
+}
+.btn-blue:hover {
+  color: var(--color-text);
+  background: var(--color-blue-light);
+}
+.btn-green:hover {
+  color: var(--color-text);
+  background: var(--color-green-light);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 main {
-	padding: var(--gap-s) var(--gap-m);
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: var(--gap-l);
-	align-self: stretch;
+  padding: var(--gap-s) var(--gap-m);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-l);
+  align-self: stretch;
+  background-color: var(--color-primary);
 }
 
 .accent {
 	color: var(--color-accent);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.earth {
+  color: var(--color-earth);
+}
+
+.list-earth li::marker {
+  color: var(--color-earth);
+}
+.list-green li::marker {
+  color: var(--color-green);
+}
+.list-blue li::marker {
+  color: var(--color-blue);
 }

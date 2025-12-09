@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Event - Hesselgaard Glamping</title>
+    <title>Aktiviteter - Hesselgaard Glamping</title>
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/calendar.css" />
+    <script src="js/calendar.js" defer></script>
+    <script src="js/event.js" defer></script>
   </head>
   <body>
     <header>
@@ -30,7 +32,251 @@
         <h1>Aktiviteter & Workshops</h1>
       </div>
     </div>
-    <main></main>
+    <main>
+      <section>
+        <div class="leftSide flexCol gapS">
+          <h2>Aktiviteter og Workshops på Hesselgaard</h2>
+          <p>
+            Hos Hesselgaard kan du vælge mellem små, rolige events som yoga,
+            klang, meditation, mindfulness og kreative workshops. De afholdes i
+            samarbejde med dygtige lokale instruktører og giver dig et pusterum
+            midt i hverdagen.
+            <br />
+            <br />
+            Du kan deltage som glampinggæst og tilføje events for en lille
+            merpris, eller du kan kigge forbi udefra, hvis du trænger til en
+            stille stund i smukke omgivelser.
+          </p>
+          <a href="#calendar" class="btn btn-small btn-primary">Se kalender</a>
+        </div>
+        <div class="rightSide">
+          <img
+            src="img/img-30.webp"
+            alt="Billede af et glamping telt"
+            class="image"
+          />
+        </div>
+      </section>
+      <section class="event-cards container events-grid">
+        <article class="event-card">
+          <img src="img/img-30.webp" alt="Pilates" class="event-card__image" />
+          <div class="event-card__body">
+            <h3>Pilates</h3>
+            <p>
+              Styrk kroppen med rolige og kontrollerede bevægelser, der øger
+              smidighed, balance og kropsbevidsthed.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">2. JANUAR | 14:00-15:00</div>
+              <div class="event-card__price">Kr. 95</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="img/img-1.webp"
+            alt="Smykkeværksted"
+            class="event-card__image"
+          />
+          <div class="event-card__body">
+            <h3>Smykkeværksted</h3>
+            <p>
+              Slip kreativiteten løs og lav dine egne smykker i hyggelige
+              omgivelser, hvor fokus er på processens glæde og detaljer.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">3. JANUAR | 14:45-16:30</div>
+              <div class="event-card__price">Kr. 175</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="img/img-1.webp"
+            alt="Soundhealing"
+            class="event-card__image"
+          />
+          <div class="event-card__body">
+            <h3>Soundhealing</h3>
+            <p>
+              Oplev en musikalsk guidet meditation med smukke harmonier og
+              klange, der trænger dybt ind i krop og sjæl.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">4. JANUAR | 15:00-16:30</div>
+              <div class="event-card__price">Kr. 100</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img src="img/img-30.webp" alt="Yoga" class="event-card__image" />
+          <div class="event-card__body">
+            <h3>Yoga</h3>
+            <p>
+              Dyk ned i blide øvelser og vejrtrækningspraksis, der giver ro,
+              styrke og balance i både krop og sind.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">5. JANUAR | 14:15-15:00</div>
+              <div class="event-card__price">Kr. 150</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="img/img-1.webp"
+            alt="Mindfullness"
+            class="event-card__image"
+          />
+          <div class="event-card__body">
+            <h3>Mindfullness</h3>
+            <p>
+              Tag en pause fra hverdagens travlhed og find roen gennem guidede
+              øvelser, der styrker opmærksomhed og nærvær i nuet.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">6. JANUAR | 14:00-15:00</div>
+              <div class="event-card__price">Kr. 150</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <article class="event-card">
+          <img
+            src="img/img-1.webp"
+            alt="Foredrag med Isa Raim"
+            class="event-card__image"
+          />
+          <div class="event-card__body">
+            <h3>Foredrag med Isa Raim</h3>
+            <p>
+              Oplev en sanselig aften med Essence Breathwork: En terapeutisk
+              tilgang til åndedrættet, der hjælper dig til ro.
+            </p>
+            <div class="event-card__meta">
+              <div class="event-card__date">7. JANUAR | 17:00-18:30</div>
+              <div class="event-card__price">Kr. 275</div>
+            </div>
+            <a class="btn btn-secondary btn-big event-card__btn" href="#"
+              >Tilmeld</a
+            >
+          </div>
+        </article>
+
+        <div class="events-pagination">
+          <button class="events-pagination__nav inactive" id="leftArrow">
+            ←
+          </button>
+
+          <button class="events-pagination__nav" id="rightArrow">→</button>
+        </div>
+      </section>
+      <section class="calendar-section" id="calendar">
+        <div class="container calendar">
+          <div class="calendar__header">
+            <button
+              class="calendar__nav calendar__nav--left"
+              aria-label="Forrige måned"
+            >
+              <img src="img/icons/arrow.svg" alt="Forrige" class="arrowLeft" />
+            </button>
+            <div class="calendar__month">December 2025</div>
+            <button
+              class="calendar__nav calendar__nav--right"
+              aria-label="Næste måned"
+            >
+              <img src="img/icons/arrow.svg" alt="Næste" class="arrowRight" />
+            </button>
+          </div>
+
+          <div class="calendar__weekdays">
+            <div>Man</div>
+            <div>Tirs</div>
+            <div>Ons</div>
+            <div>Tors</div>
+            <div>Fre</div>
+            <div>Lør</div>
+            <div>Søn</div>
+          </div>
+
+          <div class="calendar__grid">
+            <!-- Week 1 -->
+            <div class="day"><span class="date">1</span></div>
+            <div class="day"><span class="date">2</span></div>
+            <div class="day"><span class="date">3</span></div>
+            <div class="day"><span class="date">4</span></div>
+            <div class="day day--event">
+              <span class="date">5</span>
+              <div class="event">Yoga</div>
+            </div>
+            <div class="day"><span class="date">6</span></div>
+            <div class="day"><span class="date">7</span></div>
+
+            <!-- Week 2 -->
+            <div class="day"><span class="date">8</span></div>
+            <div class="day"><span class="date">9</span></div>
+            <div class="day"><span class="date">10</span></div>
+            <div class="day"><span class="date">11</span></div>
+            <div class="day"><span class="date">12</span></div>
+            <div class="day"><span class="date">13</span></div>
+            <div class="day"><span class="date">14</span></div>
+
+            <!-- Week 3 -->
+            <div class="day"><span class="date">15</span></div>
+            <div class="day"><span class="date">16</span></div>
+            <div class="day day--event">
+              <span class="date">17</span>
+              <div class="event">Soundhealing</div>
+            </div>
+            <div class="day"><span class="date">18</span></div>
+            <div class="day"><span class="date">19</span></div>
+            <div class="day"><span class="date">20</span></div>
+            <div class="day"><span class="date">21</span></div>
+
+            <!-- Week 4 -->
+            <div class="day"><span class="date">22</span></div>
+            <div class="day"><span class="date">23</span></div>
+            <div class="day"><span class="date">24</span></div>
+            <div class="day"><span class="date">25</span></div>
+            <div class="day"><span class="date">26</span></div>
+            <div class="day day--event">
+              <span class="date">27</span>
+              <div class="event">Mindfullness</div>
+            </div>
+            <div class="day"><span class="date">28</span></div>
+
+            <!-- Week 5 -->
+            <div class="day"><span class="date">29</span></div>
+            <div class="day"><span class="date">30</span></div>
+            <div class="day"><span class="date">31</span></div>
+            <!-- fill placeholders to keep grid consistent -->
+            <div class="day day--placeholder"></div>
+            <div class="day day--placeholder"></div>
+            <div class="day day--placeholder"></div>
+            <div class="day day--placeholder"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="site-footer">Footer to come</footer>
   </body>

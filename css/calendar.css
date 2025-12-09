@@ -1,0 +1,107 @@
+/* Calendar styles based on Figma design */
+.calendar {
+  width: 100%;
+  max-width: 980px;
+  margin: var(--gap-l) auto;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--gap-s) 0;
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+  margin-bottom: var(--gap-m);
+}
+
+.calendar__month {
+  font-family: var(--font-merriweather);
+  font-weight: var(--fw-merriweather-bold);
+  font-size: var(--fs-h3);
+  color: var(--color-text);
+}
+
+.calendar__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+.calendar__nav img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.calendar__nav--left {
+  left: var(--gap-m);
+}
+.calendar__nav--right {
+  right: var(--gap-m);
+}
+
+.calendar__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--gap-m);
+  text-align: center;
+  margin-bottom: var(--gap-s);
+}
+.calendar__weekdays div {
+  font-family: var(--font-merriweather);
+  font-weight: var(--fw-merriweather-bold);
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--gap-l);
+}
+
+.day {
+  min-height: 74px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-s);
+}
+.day--placeholder {
+  background: transparent;
+  border: none;
+}
+
+.date {
+  font-family: var(--font-nunito);
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.day--event {
+  background: var(--color-accent);
+  border: 1px solid var(--color-text);
+}
+.day--event .event {
+  font-family: var(--font-nunito);
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .calendar__grid {
+    gap: var(--gap-l);
+  }
+  .day {
+    min-height: 74px;
+  }
+}
