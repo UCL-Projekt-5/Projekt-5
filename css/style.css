@@ -436,20 +436,30 @@
   outline: 8px solid var(--color-aqua-light);
 }
 
-#bookTerraTent:hover {
+#bookSilvaTent:hover {
   background-color: var(--color-silva-light);
   outline: 8px solid var(--color-silva-light);
 }
 
-#bookSilvaTent:hover {
+#bookTerraTent:hover {
   background-color: var(--color-terra-light);
   outline: 8px solid var(--color-terra-light);
 }
 
-.active {
-  background-color: #f0f0f0;
-  outline: 8px solid #f0f0f0;
+#bookAquaTent.active {
+  background-color: var(--color-aqua-light);
+  outline: 8px solid var(--color-aqua-light);
 }
+#bookTerraTent.active {
+  background-color: var(--color-terra-light);
+  outline: 8px solid var(--color-terra-light);
+}
+#bookSilvaTent.active {
+  background-color: var(--color-silva-light);
+  outline: 8px solid var(--color-silva-light);
+}
+
+
 
 .bookingImg {
   max-height: 150px;
@@ -622,8 +632,4 @@
 
 .place-media {
   width: 100%;
-}
-
-.inactive {
-  border-color: var(--color-secondary);
 }

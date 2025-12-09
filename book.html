@@ -125,11 +125,21 @@
             <div class="form-row form-grid">
               <div>
                 <label for="checkin">Ankomst</label>
-                <input type="date" id="checkin" name="checkin" />
+                <input
+                  type="date"
+                  id="checkin"
+                  name="checkin"
+                  min="2026-04-01"
+                  max="2026-10-31" />
               </div>
               <div>
                 <label for="checkout">Afrejse</label>
-                <input type="date" id="checkout" name="checkout" />
+                <input
+                  type="date"
+                  id="checkout"
+                  name="checkout"
+                  min="2026-04-01"
+                  max="2026-10-31" />
               </div>
             </div>
 
@@ -147,12 +157,15 @@
             <fieldset class="extras">
               <legend>Ekstra tilkøb</legend>
               <label class="checkbox"
-                ><input type="checkbox" name="Yoga" />Yoga (50 kr.)
-                <img src="img/icons/info.min.svg" alt=""
+                ><input type="checkbox" name="Yoga" class="checkboxData" />Yoga
+                (50 kr.) <img src="img/icons/info.min.svg" alt=""
               /></label>
               <label class="checkbox"
-                ><input type="checkbox" name="extra_event" /> Deltagelse i
-                workshop/event (50 kr.)
+                ><input
+                  type="checkbox"
+                  name="extra_event"
+                  class="checkboxData" />
+                Deltagelse i workshop/event (50 kr.)
                 <img src="img/icons/info.min.svg" alt=""
               /></label>
             </fieldset>
@@ -166,8 +179,8 @@
               <label for="email">Email</label>
               <input type="email" id="email" name="email" />
             </div>
-            <div class="total-price form-row" id="displayPrice">
-              <h2>Vælg en overnatning for at se prisen</h2>
+            <div class="total-price form-row">
+              <h2 id="displayPrice">Vælg en overnatning for at se prisen</h2>
             </div>
 
             <div class="form-actions">
