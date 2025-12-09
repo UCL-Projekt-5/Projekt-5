@@ -1,18 +1,18 @@
 .contact-main {
-	display: flex;
-	flex-flow: row;
+  display: flex;
+  flex-flow: row;
 }
 
 .reviewBox {
-	display: flex;
-	min-width: 300px;
-	padding: 32px;
-	flex-direction: column;
-	align-items: center;
-	gap: 24px;
-	align-self: stretch;
-	background: #fff;
-	box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
+  display: flex;
+  min-width: 300px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  background: #fff;
+  box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
 }
 
 .reviewContainer {
@@ -21,23 +21,23 @@
 }
 
 .dotsContainer {
-	display: flex;
-	justify-content: center;
-	gap: 8px;
-	margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .dot {
-	height: 12px;
-	width: 12px;
-	background-color: #cfcfcf;
-	border-radius: 50%;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+  height: 12px;
+  width: 12px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
-	background-color: var(--color-accent);
+  background-color: var(--color-accent);
 }
 
 /* Hero image section */
@@ -562,4 +562,44 @@
 
 .bookTentContainer .price {
   margin: 0;
+}
+
+/* Om os */
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-l);
+  div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-section3 {
+  display: grid;
+  grid-template-areas:
+    "img1 img1 img1 img2"
+    "img3 img4 img4 img4"
+    "img5 img5 img5 img6";
+  gap: var(--gap-m);
+}
+
+.about-gallery-1 {
+  grid-area: img1;
+}
+.about-gallery-2 {
+  grid-area: img2;
+}
+.about-gallery-3 {
+  grid-area: img3;
+}
+.about-gallery-4 {
+  grid-area: img4;
+}
+.about-gallery-5 {
+  grid-area: img5;
+}
+.about-gallery-6 {
+  grid-area: img6;
 }
