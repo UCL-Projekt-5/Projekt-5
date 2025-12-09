@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/aistyle.css" />
+    <link rel="stylesheet" href="css/aistyle-media.css" />
 
     <script src="js/script.js" defer></script>
     <title>Telte - Hesselgaard Glamping</title>
@@ -35,11 +36,21 @@
     </div>
 
     <main>
+      <section class="tentIntroText flexCol">
+        <h2>
+          Hos Hesselgaard tilbyder vi tre unikke telte med hver deres tema, så
+          du kan vælge, hvad der føles helt rigtigt for dig.
+        </h2>
+        <p>
+          <b>Praktisk info:</b> Check-in fra kl. 15.00 | Check-ud senest kl.
+          10.00 med mindre andet aftales.
+        </p>
+      </section>
       <section class="tent terra">
         <div class="tent-container">
           <div class="tent-left flexCol gapS">
             <div class="tent-badge tent-badge--earth">
-              <img src="img/icons/animals.svg" alt="" />
+              <img src="img/icons/terra.min.svg" alt="" />
             </div>
             <h2>Terra</h2>
             <p class="caption earth">LANDTELTET</p>
@@ -75,7 +86,7 @@
             <div class="tent-detail__cta-row flexCol gapS">
               <div class="price-box--earth">
                 <div class="price-label">Fra</div>
-                <div class="price-amount">1.864 Kr.</div>
+                <div class="price-amount">1.495 kr.</div>
               </div>
               <a href="book.html" class="btn btn-primary btn-earth btn-big"
                 >Book nu</a
@@ -98,7 +109,7 @@
         <div class="tent-container">
           <div class="tent-left flexCol gapS">
             <div class="tent-badge tent-badge--green">
-              <img src="img/icons/animals.svg" alt="" />
+              <img src="img/icons/silva.min.svg" alt="" />
             </div>
             <h2>Silva</h2>
             <p class="caption green">SKOVTELTET</p>
@@ -132,7 +143,7 @@
             <div class="tent-detail__cta-row flexCol gapS">
               <div class="price-box--green">
                 <div class="price-label">Fra</div>
-                <div class="price-amount">1.864 Kr.</div>
+                <div class="price-amount">1.495 kr.</div>
               </div>
               <a href="book.html" class="btn btn-primary btn-green btn-big"
                 >Book nu</a
@@ -155,7 +166,7 @@
         <div class="tent-container">
           <div class="tent-left flexCol gapS">
             <div class="tent-badge tent-badge--blue">
-              <img src="img/icons/animals.svg" alt="" />
+              <img src="img/icons/aqua.min.svg" alt="" />
             </div>
             <h2>Aqua</h2>
             <p class="caption blue">VANDTELTET</p>
@@ -191,7 +202,7 @@
             <div class="tent-detail__cta-row flexCol gapS">
               <div class="price-box--blue">
                 <div class="price-label">Fra</div>
-                <div class="price-amount">1.864 Kr.</div>
+                <div class="price-amount">1.495 kr.</div>
               </div>
               <a href="book.html" class="btn btn-primary btn-blue btn-big"
                 >Book nu</a
@@ -223,7 +234,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/toilet.svg"
+                src="img/icons/wc.min.svg"
                 alt="Toilet"
                 class="include-icon" />
             </div>
@@ -233,7 +244,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/animals.svg"
+                src="img/icons/animals.min.svg"
                 alt="Dyreliv"
                 class="include-icon" />
             </div>
@@ -243,7 +254,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/fridge.svg"
+                src="img/icons/fridge.min.svg"
                 alt="Thekøkken"
                 class="include-icon" />
             </div>
@@ -253,7 +264,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/bike.svg"
+                src="img/icons/beach.min.svg"
                 alt="Lånecykler"
                 class="include-icon" />
             </div>
@@ -263,7 +274,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/rabbit.svg"
+                src="img/icons/rabbit.min.svg"
                 alt="Kaninfarm"
                 class="include-icon" />
             </div>
@@ -273,7 +284,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/washer.svg"
+                src="img/icons/washer-svgfind-com-1.min.svg"
                 alt="Tøjvask"
                 class="include-icon" />
             </div>
@@ -283,7 +294,7 @@
           <div class="include-card">
             <div class="include-icon-container">
               <img
-                src="img/icons/beach.svg"
+                src="img/icons/beach.min.svg"
                 alt="Stranden"
                 class="include-icon" />
             </div>
@@ -292,13 +303,13 @@
 
           <div class="include-card">
             <div class="include-icon-container">
-              <img src="img/icons/fire.svg" alt="Bålfad" class="include-icon" />
+              <img src="img/icons/ild.min.svg" alt="Bålfad" class="include-icon" />
             </div>
             <div class="include-title"><h3>Bålfad og brænde</h3></div>
           </div>
         </div>
       </section>
-      <section class="prices-section container flexCol">
+      <section class="prices-section">
         <div class="prices-header">
           <h2>Priser</h2>
           <p>
@@ -309,63 +320,69 @@
 
         <div class="prices-grid">
           <div class="price-card">
-            <h3>Lavsæson</h3>
-            <p class="muted">
-              1. april - 26. juni | 1. september - 1. oktober | eksklusiv alle
-              weekender og helligdage
-            </p>
+            <div class="price-text">
+              <h3>Lavsæson</h3>
+              <p>
+                1. april - 26. juni | 1. september - 1. oktober | eksklusiv alle
+                weekender og helligdage
+              </p>
+            </div>
             <div class="price-lines">
-              <div>Første nat - <span class="price-amount">1495 kr.</span></div>
+              <div>Første nat - <b>1.495 kr.</b></div>
               <div>
                 Efterfølgende pris pr. nat -
-                <span class="price-amount">1350 kr.</span>
+                <b>1.350 kr.</b>
               </div>
             </div>
           </div>
 
           <div class="price-card">
-            <h3>Højsæson</h3>
-            <p class="muted">
-              27. juni - 31. august | inkluderet alle weekender og helligdage
-            </p>
+            <div class="price-text">
+              <h3>Højsæson</h3>
+              <p>
+                27. juni - 31. august | inkluderet alle weekender og helligdage
+              </p>
+            </div>
             <div class="price-lines">
-              <div>Første nat - <span class="price-amount">1795 kr.</span></div>
+              <div>Første nat - <b>1.795 kr.</b></div>
               <div>
                 Efterfølgende pris pr. nat -
-                <span class="price-amount">1600 kr.</span>
+                <b>1.600 kr.</b>
               </div>
             </div>
           </div>
 
           <div class="price-card">
-            <h3>Ekstra tilkøb</h3>
-            <p class="muted">Alle dage</p>
+            <div class="price-text">
+              <h3>Ekstra tilkøb</h3>
+              <p>Alle dage</p>
+            </div>
             <div class="price-lines">
               <div>
-                Ekstra opredning pr. pers. (maks 2 per. telt) -
-                <span class="price-amount">300 kr.</span>
+                Ekstra opredning pr. pers. (maks 2 ekstra per. telt) -
+                <b>300 kr.</b>
               </div>
-              <div>
-                Events pris pr. event - <span class="price-amount">50 kr.</span>
-              </div>
+              <div>Events pris pr. event - <b>50 kr.</b></div>
             </div>
           </div>
         </div>
-        <a href="book.html" class="btn btn-big btn-primary">Book nu</a>
-      </section>
-
-      <section>
-        <div class="leftSide colorFill">
-          <h2>Aktiviteter og workshops på Hesselgaard</h2>
-          <p>
-            På Hesselgaard kan du også tilmelde dig forskellige events. Udforsk
-            de kommende arrangementer og find lige det, der passer dig.
-          </p>
-          <a href="event.html" class="btn btn-big btn-secondary">Læs mere</a>
-        </div>
-        <div class="rightSide"><img src="img/img-1.webp" alt="" /></div>
+        <a href="book.html" class="btn btn-big btn-primary center">Book nu</a>
       </section>
     </main>
+    <section class="colorFillAcc eventShowCase">
+      <div class="leftSide colorFillPri eventShowCase-text">
+        <h2>Aktiviteter og workshops på Hesselgaard</h2>
+        <p>
+          På Hesselgaard kan du også tilmelde dig forskellige events. Udforsk de
+          kommende arrangementer og find lige det, der passer dig.
+        </p>
+        <a href="event.html" class="btn btn-big btn-secondary">Læs mere</a>
+      </div>
+      <div
+        class="rightSide eventShowCase-img backgroundImg"
+        style="background-image: url('img/img-1.webp')"
+        aria-hidden="true"></div>
+    </section>
     <footer class="site-footer">Footer to come</footer>
   </body>
 </html>

@@ -186,6 +186,7 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
+  object-fit: cover;
 }
 
 .image {
@@ -195,12 +196,14 @@ img {
 }
 
 button {
-  color: none;
+  color: var(--color-text);
   border: none;
   font-family: var(--font-nunito);
-  font-weight: var(--fw-nunito-regular);
+  font-weight: var(--fw-nunito-bold);
   font-size: var(--fs-body);
   line-height: var(--line-height-auto);
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .btn {
@@ -284,6 +287,14 @@ main {
   color: var(--color-accent);
 }
 
+.colorFillPri {
+  background-color: var(--color-primary);
+}
+
+.colorFillAcc {
+  background-color: var(--color-accent);
+}
+
 .blue {
   color: var(--color-blue);
 }
@@ -304,4 +315,97 @@ main {
 }
 .list-blue li::marker {
   color: var(--color-blue);
+}
+
+.flexRow {
+  display: flex;
+  flex-flow: row;
+  gap: var(--gap-m);
+}
+.flexCol {
+  display: flex;
+  flex-flow: column;
+  gap: var(--gap-m);
+}
+
+.gapS {
+  gap: var(--gap-s);
+}
+
+.gap8 {
+  gap: 8px;
+}
+
+.center {
+  display: grid;
+  place-content: center;
+  align-self: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  width: 100%;
+  padding: var(--gap-s) var(--gap-m);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+  z-index: 10;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  width: 100%;
+  padding: var(--gap-m);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  background: var(--color-secondary);
+  z-index: 10;
+}
+
+section {
+  display: flex;
+  flex-flow: row;
+  gap: var(--gap-l);
+  width: 100%;
+}
+
+.leftSide,
+.rightSide {
+  width: 100%;
+}
+.hero-fill {
+  background-color: var(--color-secondary);
+  max-height: 200px;
+  padding: var(--gap-l);
+  width: 100%;
+  text-align: center;
+}
+
+.arrowRight {
+  transform: rotate(90deg);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.arrowLeft {
+  transform: rotate(-90deg);
+  transform-box: fill-box;
+  transform-origin: center;
 }
