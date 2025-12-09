@@ -1,8 +1,17 @@
 /* Calendar styles based on Figma design */
 .calendar {
   width: 100%;
-  max-width: 980px;
-  margin: var(--gap-l) auto;
+  max-width: 1000px;
+  margin: var(--gap-s) auto;
+}
+
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  gap: var(--gap-s);
 }
 
 .calendar__header {
@@ -16,13 +25,6 @@
   margin-bottom: var(--gap-m);
 }
 
-.calendar__month {
-  font-family: var(--font-merriweather);
-  font-weight: var(--fw-merriweather-bold);
-  font-size: var(--fs-h3);
-  color: var(--color-text);
-}
-
 .calendar__nav {
   position: absolute;
   top: 50%;
@@ -33,11 +35,7 @@
   cursor: pointer;
   color: var(--color-text);
 }
-.calendar__nav img {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
+
 .calendar__nav--left {
   left: var(--gap-m);
 }
@@ -48,23 +46,20 @@
 .calendar__weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: var(--gap-m);
+  gap: var(--gap-s);
   text-align: center;
   margin-bottom: var(--gap-s);
-}
-.calendar__weekdays div {
-  font-family: var(--font-merriweather);
-  font-weight: var(--fw-merriweather-bold);
 }
 
 .calendar__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: var(--gap-l);
+  gap: var(--gap-s);
 }
 
 .day {
-  min-height: 74px;
+  min-height: 80px;
+  width: 130px;
   border: 1px solid var(--color-secondary);
   background: var(--color-primary);
   display: flex;
@@ -79,29 +74,21 @@
 }
 
 .date {
-  font-family: var(--font-nunito);
-  font-size: var(--fs-body);
-  color: var(--color-text);
   display: block;
-  margin-bottom: 6px;
 }
 
 .day--event {
   background: var(--color-accent);
   border: 1px solid var(--color-text);
+  cursor: pointer;
+  color: var(--color-primary);
 }
 .day--event .event {
-  font-family: var(--font-nunito);
-  font-size: var(--fs-body);
-  color: var(--color-text);
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .calendar__grid {
-    gap: var(--gap-l);
-  }
-  .day {
-    min-height: 74px;
+    gap: var(--gap-s);
   }
 }

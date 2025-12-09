@@ -1,88 +1,6 @@
-/* Header */
-header {
-	display: flex;
-	width: 100%;
-	padding: var(--gap-s) var(--gap-m);
-	justify-content: space-between;
-	align-items: center;
-	background-color: var(--color-secondary);
-	z-index: 10;
-}
-
-.nav-links {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 64px;
-}
-
-.site-nav {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	gap: 64px;
-}
-
-/* Footer */
-footer {
-	display: flex;
-	width: 100%;
-	padding: var(--gap-m);
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	gap: 32px;
-	background: var(--color-secondary);
-	z-index: 10;
-}
-
 .contact-main {
 	display: flex;
 	flex-flow: row;
-}
-
-.flexRow {
-	display: flex;
-	flex-flow: row;
-	gap: var(--gap-m);
-}
-.flexCol {
-  display: flex;
-  flex-flow: column;
-  gap: var(--gap-m);
-}
-
-.gapS {
-  gap: var(--gap-s);
-}
-
-.gap8 {
-  gap: 8px;
-}
-
-section {
-  display: flex;
-  flex-flow: row;
-  gap: var(--gap-l);
-  width: 100%;
-}
-
-.leftSide,
-.rightSide {
-	width: 100%;
-}
-.hero-fill {
-  background-color: var(--color-secondary);
-  max-height: 200px;
-  padding: var(--gap-l);
-  width: 100%;
-  text-align: center;
-}
-.arrowRight {
-	rotate: 90deg;
-}
-.arrowLeft {
-	rotate: -90deg;
 }
 
 .reviewBox {
@@ -98,7 +16,8 @@ section {
 }
 
 .reviewContainer {
-	gap: var(--gap-s);
+  gap: var(--gap-s);
+  align-items: center;
 }
 
 .dotsContainer {
@@ -123,8 +42,7 @@ section {
 
 /* Hero image section */
 .hero-image {
-	width: 100%;
-
+  width: 100%;
   background-image: url("/img/img-1.webp");
   min-height: 600px;
   height: 600px;
@@ -172,20 +90,41 @@ section {
   grid-template-areas: "left right";
   gap: var(--gap-l);
 }
+.gallery {
+  display: grid;
+  grid-template-areas:
+    "img1 img1 img1 img2 img2"
+    "img3 img3 img4 img4 img4";
+  gap: var(--gap-s);
+}
+
+.gallery-item {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-1 {
+  grid-area: img1;
+}
+.gallery-2 {
+  grid-area: img2;
+}
+.gallery-3 {
+  grid-area: img3;
+}
+.gallery-4 {
+  grid-area: img4;
+}
 
 /* -----Event------ */
 
-/* Styles for AI-generated event cards section (based on Figma)
-   Scoped to `.events-grid` so it doesn't affect other pages. */
-
 .events-grid {
   display: block;
-  margin-top: var(--gap-l);
 }
 
 .events-grid .event-card {
   background: transparent;
-
   overflow: hidden;
 }
 
@@ -198,7 +137,6 @@ section {
 .event-card {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-s);
 }
 
 .event-card__image {
@@ -206,40 +144,20 @@ section {
   height: 200px;
   object-fit: cover;
   display: block;
+  margin-bottom: 2px;
 }
 
-.event-card__body {
-  padding: var(--gap-s) 0;
-}
-
-.event-card h3 {
-  font-family: var(--font-merriweather);
-  font-weight: var(--fw-merriweather-bold);
-  font-size: var(--fs-h3);
-  margin-bottom: 8px;
-}
-
-.event-card__body p {
-  color: var(--color-text);
-  margin-bottom: 12px;
-}
-
-.event-card__meta {
+.price {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--color-secondary);
-  padding-top: 12px;
-  margin-bottom: 12px;
-}
-
-.event-card__date {
-  font-size: 0.9rem;
-  color: var(--color-text);
-}
-
-.event-card__price {
-  font-weight: 700;
+  align-items: left;
+  border-left: 1px solid var(--color-secondary);
+  padding-left: var(--gap-s);
+  margin-bottom: var(--gap-s);
+  font-weight: bold;
+  font-size: var(--fs-caption);
+  margin-top: var(--gap-m);
 }
 
 /* Desktop layout */
@@ -254,13 +172,20 @@ section {
 
 /* Telte */
 
-/* Tent detail styles */
+.tentIntroText h2 {
+  max-width: 650px;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
 .tent-container {
   display: grid;
   grid-template-columns: var(--text-max-width-desktop) auto;
   gap: var(--gap-l);
   align-items: start;
   width: 100%;
+  max-height: 650px;
 }
 .tent-left {
   max-width: var(--text-max-width-desktop);
@@ -311,24 +236,21 @@ section {
   border-left: 3px solid var(--color-blue);
   padding-left: 12px;
 }
-.price-label {
-  font-family: var(--font-nunito);
-  color: var(--color-text);
-}
+
 .price-amount {
   font-weight: bold;
-  font-size: var(--fs-h3);
 }
 
 .tent-right {
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
   gap: var(--gap-s);
+  max-height: 650px;
 }
 
 .gallery-main img {
   width: 100%;
-  height: 100%;
+  height: 392px;
 }
 .gallery-row {
   display: grid;
@@ -337,7 +259,7 @@ section {
 }
 .gallery-row img {
   width: 100%;
-  height: auto;
+  height: 242px;
 }
 
 @media (max-width: 767px) {
@@ -404,26 +326,29 @@ section {
 /* Prices section */
 .prices-section {
   text-align: center;
-  padding: var(--gap-m);
+  gap: var(--gap-s);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    max-width: none;
+  }
 }
 
 .prices-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap-l);
-  align-items: start;
+  align-items: stretch;
 }
 .price-card {
   background: #fff;
-  padding: var(--gap-l);
-  border-radius: 6px;
+  padding: var(--gap-m);
   text-align: left;
   min-height: 220px;
-}
-
-.price-card .muted {
-  color: var(--color-text);
-  margin-bottom: var(--gap-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
 }
 
 @media (max-width: 1024px) {
@@ -451,4 +376,190 @@ section {
 
 .inactive {
   color: var(--color-secondary);
+}
+.eventShowCase {
+  padding: var(--gap-m);
+  width: 100%;
+  display: flex;
+  gap: var(--gap-l);
+  align-items: stretch;
+  justify-items: center;
+}
+
+.eventShowCase-text {
+  padding: var(--gap-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  flex: 0 0 50%;
+  align-self: flex-start;
+}
+
+.backgroundImg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Kontakt */
+
+.leftSide form {
+  display: block;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  margin-top: var(--gap-s);
+}
+.leftSide label {
+  display: block;
+  font-weight: 600;
+}
+.leftSide input[type="email"],
+.leftSide textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-accent);
+  font-family: var(--font-nunito);
+}
+.leftSide textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Booking */
+
+.guest-info {
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
+  margin: var(--gap-s) 0;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.main-book .intro-section {
+  grid-area: intro;
+  p {
+    max-width: none;
+  }
+}
+.main-book .leftSide {
+  grid-area: leftSide;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+}
+
+.bookTentsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-m);
+  max-width: 100%;
+}
+
+.bookTentContainer {
+  cursor: pointer;
+}
+
+.bookTentContainer:hover {
+  transform: scale(0.95);
+}
+
+#bookAquaTent:hover {
+  background-color: var(--color-blue-light);
+  outline: 8px solid var(--color-blue-light);
+}
+
+#bookTerraTent:hover {
+  background-color: var(--color-green-light);
+  outline: 8px solid var(--color-green-light);
+}
+
+#bookSilvaTent:hover {
+  background-color: var(--color-earth-light);
+  outline: 8px solid var(--color-earth-light);
+}
+
+.bookingImg {
+  max-height: 150px;
+  width: 100%;
+}
+
+.main-book .rightSide {
+  grid-area: rightSide;
+}
+
+.main-book {
+  display: grid;
+  grid-template-areas:
+    "leftSide intro"
+    "leftSide rightSide"
+    "leftSide rightSide";
+  gap: var(--gap-l);
+  row-gap: var(--gap-s);
+}
+
+.form-row {
+  margin-bottom: var(--gap-m);
+  display: flex;
+  flex-direction: column;
+}
+.form-row label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="date"],
+.form-row input[type="number"],
+.form-row select {
+  padding: 10px 12px;
+  border: 1px solid var(--color-accent);
+  font-family: var(--font-nunito);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-m);
+  justify-items: center;
+}
+
+.extras {
+  border: 1px solid var(--color-accent);
+  padding: var(--gap-s);
+  margin-bottom: var(--gap-m);
+}
+
+.checkbox {
+  display: flex;
+  margin-bottom: 8px;
+  border-radius: 0;
+  gap: var(--gap-s);
+  align-items: center;
+  img {
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
+
+.booking-summary .summary-card {
+  background: var(--color-blue-light);
+  padding: var(--gap-m);
+  text-align: left;
+}
+
+.total-price {
+  border: 1px solid var(--color-accent);
+  padding: var(--gap-s);
+}
+
+.booking-form {
+  width: 100%;
+}
+
+.bookTentContainer .price {
+  margin: 0;
 }

@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/aistyle.css" />
+
+    <link rel="stylesheet" href="css/aistyle-media.css" />
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -34,181 +35,147 @@
       </div>
     </div>
 
-    <main>
-      <section class="booking">
-        <div class="booking-container">
-          <div class="booking-form">
-            <h2>Book dit ophold</h2>
-            <p class="muted">
-              Vælg telt, datoer og ekstra services. Udfyld dine
-              kontaktoplysninger for at fuldføre reservationen.
-            </p>
-
-            <div class="recommended">
-              <h3 class="recommended__title">Vælg et telt</h3>
-              <div class="cards-row">
-                <article class="card" data-tent="aqua">
-                  <div class="card-media">
-                    <img
-                      src="img/figma-assets/c798aa3fb7ff126d8331937d8ee1fa3dc47f32a5.png"
-                      alt="Aqua" />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Aqua</h4>
-                    <p class="card-caption blue">I ÉT MED VANDET</p>
-                    <p class="card-desc">
-                      Aqua er vores luksus-telt, hvor temaet er vandet med
-                      indretning og opredning der følger temaet.
-                    </p>
-                    <div class="card-meta">
-                      <img
-                        src="img/icons/people.svg"
-                        alt="Gæster"
-                        class="meta-icon" /><span>4-6 gæster</span>
-                    </div>
-                    <div class="card-price">Fra <strong>1.864 Kr.</strong></div>
-                  </div>
-                </article>
-
-                <article class="card" data-tent="terra">
-                  <div class="card-media">
-                    <img
-                      src="img/figma-assets/afde3080fadd9905c007c128c8554e6bb3232ff0.png"
-                      alt="Terra" />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Terra</h4>
-                    <p class="card-caption green">FORBUNDET MED JORDEN</p>
-                    <p class="card-desc">
-                      Terra er vores luksus-telt, hvor temaet er landet med
-                      indretning om opredning der følger temaet.
-                    </p>
-                    <div class="card-meta">
-                      <img
-                        src="img/icons/people.svg"
-                        alt="Gæster"
-                        class="meta-icon" /><span>4-6 gæster</span>
-                    </div>
-                    <div class="card-price">Fra <strong>1.864 Kr.</strong></div>
-                  </div>
-                </article>
-
-                <article class="card" data-tent="silva">
-                  <div class="card-media">
-                    <img
-                      src="img/figma-assets/fb2ce3a19be673576a7d43a3ad8d64596bd2c02d.png"
-                      alt="Silva" />
-                  </div>
-                  <div class="card-body">
-                    <h4 class="card-title">Silva</h4>
-                    <p class="card-caption earth">OMSLUTTET AF SKOVEN</p>
-                    <p class="card-desc">
-                      Silva er vores luksus-telt, hvor temaet er skoven med
-                      indretning og opredning der følger temaet.
-                    </p>
-                    <div class="card-meta">
-                      <img
-                        src="img/icons/people.svg"
-                        alt="Gæster"
-                        class="meta-icon" /><span>4-6 gæster</span>
-                    </div>
-                    <div class="card-price">Fra <strong>1.864 Kr.</strong></div>
-                  </div>
-                </article>
+    <main class="main-book">
+      <section class="intro-section flexCol gapS">
+        <h2>Book dit ophold</h2>
+        <p>
+          Vælg telt, datoer og ekstra services. Udfyld dine kontaktoplysninger
+          for at fuldføre reservationen.
+        </p>
+      </section>
+      <section class="leftSide">
+        <div class="bookTentsWrapper">
+          <div class="bookTentContainer" id="bookAquaTent">
+            <div class="img">
+              <img
+                src="img/img-1.webp"
+                alt="Billede af Aqua telt"
+                class="bookingImg" />
+            </div>
+            <div class="text">
+              <h2>Aqua</h2>
+              <p class="caption blue">I ÉT MED VANDET</p>
+              <p>
+                Aqua er vores luksus-telt, hvor temaet er vandet med indretning
+                og opredning der følger temaet.
+              </p>
+              <div class="guest-info">
+                <img src="img/icons/mennesker.min.svg" alt="3 people" />
+                <p class="caption">4-6 gæster</p>
               </div>
             </div>
-
-            <form id="bookingForm">
-              <div class="form-row">
-                <label for="tent">Vælg telt</label>
-                <select id="tent" name="tent">
-                  <option value="terra">Terra — Landteltet</option>
-                  <option value="silva">Silva — Skovteltet</option>
-                  <option value="aqua">Aqua — Vandteltet</option>
-                </select>
-              </div>
-
-              <div class="form-row form-grid">
-                <div>
-                  <label for="checkin">Ankomst</label>
-                  <input type="date" id="checkin" name="checkin" />
-                </div>
-                <div>
-                  <label for="checkout">Afrejse</label>
-                  <input type="date" id="checkout" name="checkout" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <label for="guests">Antal gæster</label>
-                <input
-                  type="number"
-                  id="guests"
-                  name="guests"
-                  min="1"
-                  max="6"
-                  value="2" />
-              </div>
-
-              <fieldset class="extras">
-                <legend>Ekstra tilkøb</legend>
-                <label class="checkbox"
-                  ><input type="checkbox" name="extra_bedding" /> Ekstra
-                  opredning (300 kr.)</label
-                >
-                <label class="checkbox"
-                  ><input type="checkbox" name="extra_event" /> Deltagelse i
-                  workshop/event (50 kr.)</label
-                >
-              </fieldset>
-
-              <h3>Kontaktoplysninger</h3>
-              <div class="form-row">
-                <label for="name">Fulde navn</label>
-                <input type="text" id="name" name="name" />
-              </div>
-              <div class="form-row">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" />
-              </div>
-
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary btn-big">
-                  Fortsæt til betaling
-                </button>
-              </div>
-            </form>
+            <div class="price">
+              <p class="caption">Fra</p>
+              <p class="pBig">1.495 kr.</p>
+            </div>
           </div>
-
-          <aside class="booking-summary">
-            <div class="summary-card">
-              <h3>Din reservation</h3>
-              <div class="summary-line">
-                <strong>Telt:</strong> <span id="s-tent">Terra</span>
-              </div>
-              <div class="summary-line">
-                <strong>Ankomst:</strong> <span id="s-checkin">—</span>
-              </div>
-              <div class="summary-line">
-                <strong>Afrejse:</strong> <span id="s-checkout">—</span>
-              </div>
-              <div class="summary-line">
-                <strong>Gæster:</strong> <span id="s-guests">2</span>
-              </div>
-              <div class="summary-line extras-selected">
-                <strong>Tilkøb:</strong> <span id="s-extras">Ingen</span>
-              </div>
-
-              <div class="summary-total">
-                <div>Estimeret pris</div>
-                <div class="price-large">1.495 kr.</div>
-              </div>
-
-              <a href="contact.html" class="btn btn-secondary"
-                >Spørgsmål? Kontakt os</a
-              >
+          <div class="bookTentContainer" id="bookTerraTent">
+            <div class="img">
+              <img
+                src="img/img-1.webp"
+                alt="Billede af Terra telt"
+                class="bookingImg" />
             </div>
-          </aside>
+            <div class="text">
+              <h2>Terra</h2>
+              <p class="caption green">FORBUNDET MED JORDEN</p>
+              <p>
+                Terra er vores luksus-telt, hvor temaet er landet med indretning
+                om opredning der følger temaet.
+              </p>
+              <div class="guest-info">
+                <img src="img/icons/mennesker.min.svg" alt="3 people" />
+                <p class="caption">4-6 gæster</p>
+              </div>
+            </div>
+            <div class="price">
+              <p class="caption">Fra</p>
+              <p class="pBig">1.495 kr.</p>
+            </div>
+          </div>
+          <div class="bookTentContainer" id="bookSilvaTent">
+            <div class="img">
+              <img
+                src="img/img-1.webp"
+                alt="Billede af Silva telt"
+                class="bookingImg" />
+            </div>
+            <div class="text">
+              <h2>Silva</h2>
+              <p class="caption earth">OMSLUTTET AF SKOVEN</p>
+              <p>
+                Silva er vores luksus-telt, hvor temaet er skoven med indretning
+                og opredning der følger temaet.
+              </p>
+              <div class="guest-info">
+                <img src="img/icons/mennesker.min.svg" alt="3 people" />
+                <p class="caption">4-6 gæster</p>
+              </div>
+            </div>
+            <div class="price">
+              <p class="caption">Fra</p>
+              <p class="pBig">1.495 kr.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rightSide">
+        <div class="booking-form">
+          <form id="bookingForm">
+            <div class="form-row form-grid">
+              <div>
+                <label for="checkin">Ankomst</label>
+                <input type="date" id="checkin" name="checkin" />
+              </div>
+              <div>
+                <label for="checkout">Afrejse</label>
+                <input type="date" id="checkout" name="checkout" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="guests">Antal gæster</label>
+              <input
+                type="number"
+                id="guests"
+                name="guests"
+                min="1"
+                max="6"
+                value="4" />
+            </div>
+
+            <fieldset class="extras">
+              <legend>Ekstra tilkøb</legend>
+              <label class="checkbox"
+                ><input type="checkbox" name="Yoga" />Yoga (50 kr.)
+                <img src="img/icons/info.min.svg" alt=""
+              /></label>
+              <label class="checkbox"
+                ><input type="checkbox" name="extra_event" /> Deltagelse i
+                workshop/event (50 kr.)
+                <img src="img/icons/info.min.svg" alt=""
+              /></label>
+            </fieldset>
+
+            <h3>Kontaktoplysninger</h3>
+            <div class="form-row">
+              <label for="name">Fulde navn</label>
+              <input type="text" id="name" name="name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="total-price form-row">
+              <h2>Vælg en overnatning for at se prisen</h2>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-big">
+                Fortsæt til betaling
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
