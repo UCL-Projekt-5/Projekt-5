@@ -17,11 +17,11 @@
 
 .reviewContainer {
   gap: var(--gap-s);
+  align-items: center;
 }
 
 .hero-image {
   width: 100%;
-
   background-image: url("/img/img-1.webp");
   min-height: 600px;
   height: 600px;
@@ -68,6 +68,32 @@
   display: grid;
   grid-template-areas: "left right";
   gap: var(--gap-l);
+}
+.gallery {
+  display: grid;
+  grid-template-areas:
+    "img1 img1 img1 img2 img2"
+    "img3 img3 img4 img4 img4";
+  gap: var(--gap-s);
+}
+
+.gallery-item {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-1 {
+  grid-area: img1;
+}
+.gallery-2 {
+  grid-area: img2;
+}
+.gallery-3 {
+  grid-area: img3;
+}
+.gallery-4 {
+  grid-area: img4;
 }
 
 /* -----Event------ */
