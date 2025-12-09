@@ -1,18 +1,18 @@
 .contact-main {
-  display: flex;
-  flex-flow: row;
+	display: flex;
+	flex-flow: row;
 }
 
 .reviewBox {
-  display: flex;
-  min-width: 300px;
-  padding: 32px;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
-  background: #fff;
-  box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
+	display: flex;
+	min-width: 300px;
+	padding: 32px;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	align-self: stretch;
+	background: #fff;
+	box-shadow: 0 4px 10px 0 rgba(82, 82, 82, 0.1);
 }
 
 .reviewContainer {
@@ -20,6 +20,27 @@
   align-items: center;
 }
 
+.dotsContainer {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 16px;
+}
+
+.dot {
+	height: 12px;
+	width: 12px;
+	background-color: #cfcfcf;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dot.active {
+	background-color: var(--color-accent);
+}
+
+/* Hero image section */
 .hero-image {
   width: 100%;
   background-image: url("/img/img-1.webp");
@@ -353,6 +374,9 @@
   }
 }
 
+.inactive {
+  color: var(--color-secondary);
+}
 .eventShowCase {
   padding: var(--gap-m);
   width: 100%;
