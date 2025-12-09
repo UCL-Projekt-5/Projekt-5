@@ -24,7 +24,7 @@
           <a href="event.html">Aktiviteter & Workshops</a>
           <a href="contact.html">Kontakt</a>
         </div>
-        <a href="book.html" class="btn btn-primary btn-small">Book</a>
+        <a href="book.html" class="btn btn-primary btn-small btnBook">Book</a>
       </nav>
     </header>
     <div class="hero-fill">
@@ -37,10 +37,10 @@
         <div class="leftSide flexCol gapS">
           <h2>Aktiviteter og Workshops på Hesselgaard</h2>
           <p>
-            Hos Hesselgaard kan du vælge mellem små, rolige aktiviteter som yoga,
-            klang, meditation, mindfulness og kreative workshops. De afholdes i
-            samarbejde med dygtige lokale instruktører og giver dig et pusterum
-            midt i hverdagen.
+            Hos Hesselgaard kan du vælge mellem små, rolige aktiviteter som
+            yoga, klang, meditation, mindfulness og kreative workshops. De
+            afholdes i samarbejde med dygtige lokale instruktører og giver dig
+            et pusterum midt i hverdagen.
             <br />
             <br />
             Du kan deltage som glampinggæst og tilføje aktiviteter for en lille
@@ -56,14 +56,15 @@
       <section>
         <button class="events-pagination__nav">
           <svg
-            class="arrowLeft"
+            class="arrowLeft inactive"
+            id="leftArrow"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="none"
+            fill="currentColor"
             viewBox="0 0 24 24">
             <path
-              stroke="#0f0e0e"
+              stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.71"
@@ -83,7 +84,7 @@
                 smidighed, balance og kropsbevidsthed.
               </p>
               <div class="price">
-                <div class="event-card__date">2. JANUAR | 14:00-15:00</div>
+                <div class="event-card__date">2. Januar | 14:00-15:00</div>
                 <div class="event-card__price">Kr. 95</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -103,7 +104,7 @@
                 omgivelser, hvor fokus er på processens glæde og detaljer.
               </p>
               <div class="price">
-                <div class="event-card__date">3. JANUAR | 14:45-16:30</div>
+                <div class="event-card__date">3. Januar | 14:45-16:30</div>
                 <div class="event-card__price">Kr. 175</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -123,7 +124,7 @@
                 klange, der trænger dybt ind i krop og sjæl.
               </p>
               <div class="price">
-                <div class="event-card__date">5. JANUAR | 15:00-16:30</div>
+                <div class="event-card__date">4. Januar | 15:00-16:30</div>
                 <div class="event-card__price">Kr. 100</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -140,7 +141,7 @@
                 styrke og balance i både krop og sind.
               </p>
               <div class="price">
-                <div class="event-card__date">6. JANUAR | 14:15-15:00</div>
+                <div class="event-card__date">5. Januar | 14:15-15:00</div>
                 <div class="event-card__price">Kr. 150</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -160,7 +161,7 @@
                 øvelser, der styrker opmærksomhed og nærvær i nuet.
               </p>
               <div class="price">
-                <div class="event-card__date">7. JANUAR | 14:00-15:00</div>
+                <div class="event-card__date">6. Januar | 14:00-15:00</div>
                 <div class="event-card__price">Kr. 150</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -180,7 +181,7 @@
                 tilgang til åndedrættet, der hjælper dig til ro.
               </p>
               <div class="price">
-                <div class="event-card__date">10. JANUAR | 17:00-18:30</div>
+                <div class="event-card__date">7. Januar | 17:00-18:30</div>
                 <div class="event-card__price">Kr. 275</div>
               </div>
               <a class="btn btn-secondary btn-big event-card__btn" href="#"
@@ -193,13 +194,14 @@
         <button class="events-pagination__nav">
           <svg
             class="arrowRight"
+            id="rightArrow"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             fill="none"
             viewBox="0 0 24 24">
             <path
-              stroke="#0f0e0e"
+              stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.71"

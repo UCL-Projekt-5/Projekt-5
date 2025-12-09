@@ -216,6 +216,8 @@ button {
   width: fit-content;
 }
 
+
+
 .btn-big {
   min-width: 250px;
   padding: var(--gap-s) var(--gap-m);
@@ -266,6 +268,10 @@ button {
 .btn-green:hover {
   color: var(--color-text);
   background: var(--color-green-light);
+}
+.btnBook:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .btn:active {

@@ -603,3 +603,59 @@
 .about-gallery-6 {
   grid-area: img6;
 }
+
+/* Oplev */
+
+.facts-box {
+  width: 25%;
+  border: 1px solid var(--color-secondary);
+  padding: var(--gap-s);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fact-row {
+  border-bottom: 1px solid var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.explore-section {
+  display: flex;
+  gap: var(--gap-l);
+  justify-content: space-evenly;
+}
+
+.places-grid {
+  margin-top: var(--gap-s);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--gap-m);
+}
+
+.distance {
+  font-weight: bold;
+  margin: var(--gap-s) 0;
+}
+
+.place-card {
+  display: flex;
+  gap: var(--gap-s);
+  background-color: #fff;
+  border: 1px solid var(--color-secondary);
+  padding: var(--gap-s);
+}
+
+.place-content {
+  width: 100%;
+}
+
+.place-media {
+  width: 100%;
+}
+
+.inactive {
+  border-color: var(--color-secondary);
+}
