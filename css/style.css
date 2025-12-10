@@ -151,7 +151,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
+  align-items: flex-start;
   border-left: 1px solid var(--color-secondary);
   padding-left: var(--gap-s);
   margin-bottom: var(--gap-s);
@@ -274,9 +274,11 @@
 .included-section {
   text-align: center;
   align-items: center;
-  p {
-    max-width: 100%;
-  }
+}
+
+/* flat selector for included-section paragraphs (was nested) */
+.included-section p {
+  max-width: 100%;
 }
 
 .included-grid {
@@ -312,9 +314,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  p {
-    max-width: none;
-  }
+}
+
+/* flat selector for prices-section paragraphs (was nested) */
+.prices-section p {
+  max-width: none;
 }
 
 .prices-grid {
@@ -393,18 +397,23 @@
   gap: var(--gap-s);
   align-items: center;
   margin: var(--gap-s) 0;
-  img {
-    width: 24px;
-    height: 24px;
-  }
+}
+
+/* flat selector for guest-info images (was nested) */
+.guest-info img {
+  width: 24px;
+  height: 24px;
 }
 
 .main-book .intro-section {
   grid-area: intro;
-  p {
-    max-width: none;
-  }
 }
+
+/* flat selector for intro-section paragraphs (was nested) */
+.main-book .intro-section p {
+  max-width: none;
+}
+
 .main-book .leftSide {
   grid-area: leftSide;
   display: flex;
@@ -515,10 +524,12 @@
   border-radius: 0;
   gap: var(--gap-s);
   align-items: center;
-  img {
-    max-width: 16px;
-    max-height: 16px;
-  }
+}
+
+/* flat selector for checkbox images (was nested) */
+.checkbox img {
+  max-width: 16px;
+  max-height: 16px;
 }
 
 .booking-summary .summary-card {
@@ -546,10 +557,12 @@
   display: flex;
   flex-direction: row;
   gap: var(--gap-l);
-  div {
-    width: 100%;
-    height: 100%;
-  }
+}
+
+/* flat selector for direct divs inside about-section (was nested) */
+.about-section div {
+  width: 100%;
+  height: 100%;
 }
 
 .about-section3 {

@@ -45,7 +45,8 @@ Husk at lave rem i Figma til skriftstørrelser
   --fs-caption: 0.875rem; /* 14px */
 
   /* Line Heights */
-  --line-height-auto: normal;
+  /* Use a numeric, unitless line-height so validators accept var() here. */
+  --line-height-auto: 1.4;
 
   /* Letter Spacing */
   --letter-spacing-0: 0;
