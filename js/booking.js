@@ -114,7 +114,7 @@ function mathTotalPrice() {
   totalPrice = totalPrice + extrasCount * 50;
   console.log(totalPrice);
 
-  displayPrice.innerText = totalPrice + " DKK";
+  displayPrice.innerText = totalPrice + " kr.";
 }
 
 mathTotalPrice();
