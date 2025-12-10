@@ -1,0 +1,632 @@
+/* 
+Alt i denne fil kommer fra copilot, og kan ses i bilaget Ai prompts under prompt 7.
+
+Mobile-only overrides: loaded with media="(max-width:900px)" */
+
+/* Make images and media fill available width */
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header / nav stack */
+.header,
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-s);
+  padding: var(--gap-s) var(--gap-m);
+}
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--gap-s);
+}
+.site-nav .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  align-items: flex-end;
+}
+.site-nav .nav-links a {
+  padding: var(--gap-xs) var(--gap-s);
+}
+
+/* Hide the full nav by default on mobile; show when toggled */
+.site-nav {
+  display: none;
+}
+.site-nav.open {
+  display: flex;
+  position: absolute;
+  top: calc(var(--gap-l) + var(--gap-s));
+  right: var(--gap-m);
+  background: var(--color-secondary);
+  padding: var(--gap-s);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+/* Burger button */
+.burger {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  padding: 0;
+}
+.burger:focus {
+  outline: 2px solid var(--color-accent);
+}
+.burger-box {
+  width: 24px;
+  height: 16px;
+  position: relative;
+  display: inline-block;
+}
+.burger-inner,
+.burger-inner::before,
+.burger-inner::after {
+  background-color: var(--color-text);
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  transition: transform 180ms ease, opacity 180ms ease,
+    background-color 180ms ease;
+  transform-origin: center;
+}
+.burger-inner {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger-inner::before,
+.burger-inner::after {
+  content: "";
+  left: 0;
+  top: 50%;
+}
+.burger-inner::before {
+  transform: translateY(-7px);
+}
+.burger-inner::after {
+  transform: translateY(7px);
+}
+
+/* When expanded, hide the center bar and rotate the pseudo-elements into an X */
+.burger[aria-expanded="true"] .burger-inner {
+  background-color: transparent;
+}
+.burger[aria-expanded="true"] .burger-inner::before {
+  transform: translateY(0) rotate(45deg);
+}
+.burger[aria-expanded="true"] .burger-inner::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+/* Logo smaller on mobile */
+.logo img {
+  max-width: 140px;
+}
+
+/* Hero text adjustments */
+.hero-fill,
+.hero-image {
+  padding: var(--gap-m);
+}
+
+/* Generic column stacking */
+.flexRow {
+  flex-direction: column;
+}
+.tent-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+}
+.tent-left,
+.tent-right {
+  width: 100%;
+}
+.tent-right {
+  order: 1;
+}
+.tent-left {
+  order: 2;
+}
+
+/* Galleries: stack images vertically */
+.gallery-main,
+.gallery-row {
+  width: 100%;
+  display: block;
+}
+.gallery-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.gallery-row img {
+  width: 100%;
+}
+
+/* Feature lists: make them full width stacked */
+.tent-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+}
+.features-col {
+  width: 100%;
+  /* add left padding so bullets align with other content on mobile */
+  padding-left: var(--gap-l);
+  margin-left: 0;
+  list-style-position: outside;
+}
+
+/* Included grid and prices: single column on mobile */
+.included-grid,
+.prices-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-s);
+}
+
+/* Price and CTA align */
+.tent-detail__cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  align-items: stretch;
+}
+.price-box--terra,
+.price-box--silva,
+.price-box--aqua {
+  width: auto;
+}
+
+/* Footer: stack sections */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+  padding: var(--gap-m);
+}
+.footerContainer {
+  width: 100%;
+}
+.footerSoMe {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-l);
+}
+
+/* Contact / book pages: make left/right stack */
+.leftSide,
+.rightSide {
+  width: 100%;
+}
+
+/* Buttons: full width when appropriate */
+.btn.btn-big,
+.btn.btn-primary,
+.btn.btn-secondary {
+  width: 100%;
+  text-align: center;
+}
+
+/* Small tweaks for very small screens */
+@media (max-width: 420px) {
+  .hero-text h1,
+  .hero-image-text h1 {
+    font-size: var(--fs-h1);
+  }
+  header {
+    padding: var(--gap-xs) var(--gap-s);
+  }
+}
+
+/* Force all main sections to stack vertically on mobile devices */
+section,
+.reviewsSection,
+.eventShowCase,
+.gallery,
+.tents,
+.tentContainer,
+.tent-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+  align-items: stretch;
+}
+
+/* Make gallery a single column flow on mobile */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: none;
+}
+.gallery-item {
+  height: auto;
+}
+
+/* Tent card adjustments (handle both kebab and camelCase classnames) */
+.tentContainer,
+.tent-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+}
+.tentContainer .img img,
+.tent-container .img img,
+.tentContainer .image,
+.tent-container .image {
+  width: 100%;
+  height: auto;
+}
+
+/* Ensure review slideshow stacks nicely */
+.reviewContainer {
+  flex-direction: column;
+  align-items: center;
+}
+.reviewBox {
+  min-width: auto;
+  width: 100%;
+  padding: var(--gap-m);
+}
+
+/* end forced stacking rules */
+
+/* end mobile.css */
+
+/* Additional strong mobile fixes to prevent image/text overlap on tents page */
+@media (max-width: 900px) {
+  .tent-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+    align-items: stretch;
+  }
+  .tent {
+    margin-bottom: -120px;
+  }
+  /* Show image first, then text (feel free to swap orders if you prefer text first) */
+  .tent-right {
+    order: 2;
+    position: static;
+    max-height: none;
+  }
+  .tent-left {
+    order: 1;
+    min-width: 0;
+  }
+
+  /* Make all tent images scale responsively and remove fixed heights */
+  .tent-right img,
+  .gallery-main img,
+  .gallery-row img,
+  .gallery-item,
+  .tent-container img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+  }
+
+  /* Ensure text blocks flow below images and are readable */
+  .tent-left,
+  .tent-detail__description,
+  .tent-features,
+  .tent-detail__cta-row {
+    background: transparent;
+    z-index: 2;
+  }
+
+  /* Remove any leftover desktop max-heights that could clip content */
+  .tent-right,
+  .tent-container,
+  .gallery-main,
+  .gallery-row {
+    max-height: none;
+  }
+
+  /* Hide gallery thumbnails on mobile to keep a single large image visible.
+     This removes the extra 2 images per tent on small screens. If you
+     later want to show thumbnails on specific pages, add `show-thumbs-mobile`
+     to the page root (e.g. `<body class="show-thumbs-mobile">`). */
+  .gallery-row {
+    display: none;
+  }
+
+  /* Helper to opt-in thumbnails on mobile for specific pages/components */
+  .show-thumbs-mobile .gallery-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  /* About page: ensure images appear above text on mobile */
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+  /* Place image before text for all about sections */
+  .about-section .about-img {
+    order: -1;
+    width: 100%;
+  }
+  .about-section .about-text {
+    order: 0;
+    width: 100%;
+  }
+
+  /* Explore page: make places grid single column and put image above text */
+  .places-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-m);
+  }
+  .place-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+    align-items: stretch;
+  }
+  /* Ensure media appears before content on mobile */
+  .place-card .place-media {
+    order: -1;
+    width: 100%;
+  }
+  .place-card .place-content {
+    order: 0;
+    width: 100%;
+  }
+  .place-card .place-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Facts box (explore page) - make full width on mobile and layout rows nicely */
+  .facts-box {
+    width: 100%;
+    max-width: none;
+    padding: calc(var(--gap-s)) var(--gap-s);
+    box-sizing: border-box;
+    align-self: stretch;
+  }
+  .facts-box h3 {
+    margin: 0 0 var(--gap-s) 0;
+  }
+  .fact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-s);
+    align-items: center;
+    padding: calc(var(--gap-xs)) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .fact-row:last-child {
+    border-bottom: none;
+  }
+  .fact-row p {
+    margin: 0;
+    padding: 0;
+  }
+  /* Make the left column labels slightly muted and smaller */
+  .fact-row > div:first-child p {
+    font-weight: 600;
+    color: var(--color-text);
+    opacity: 0.9;
+    font-size: var(--fs-caption);
+  }
+  .fact-row > div:last-child p {
+    text-align: right;
+    font-size: var(--fs-body);
+  }
+
+  /* Events page: move pagination arrows to bottom of the event cards (mobile only) */
+  /* Make section a positioned container so absolute buttons are relative to it */
+  section {
+    position: relative;
+  }
+
+  /* Style pagination nav buttons and pin them to bottom left/right */
+  section > .events-pagination__nav {
+    position: absolute;
+    bottom: calc(var(--gap-s));
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1200;
+    padding: 0;
+  }
+
+  /* Left (first) nav */
+  section > .events-pagination__nav:first-of-type {
+    left: var(--gap-m);
+  }
+
+  /* Right (last) nav */
+  section > .events-pagination__nav:last-of-type {
+    right: var(--gap-m);
+  }
+
+  /* Ensure the event grid leaves room at the bottom so arrows don't overlap content */
+  .event-cards {
+    padding-bottom: calc(44px + var(--gap-m));
+  }
+
+  /* Compact calendar: make text and day boxes noticeably smaller on mobile */
+  .calendar {
+    width: 100%;
+    max-width: none;
+    padding: var(--gap-xs);
+  }
+  /* Use single-column vertical flow for maximum compactness on small screens */
+  .calendar__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-xs);
+  }
+  .calendar__weekdays {
+    display: none;
+  }
+  .calendar__header {
+    padding: calc(var(--gap-xs)) 0;
+  }
+  .calendar__nav {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+    padding: 0;
+  }
+  .day {
+    min-height: 44px;
+    padding: calc(var(--gap-xs)) calc(var(--gap-xs));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-xs);
+  }
+  .date {
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .day .event {
+    font-size: 0.75rem;
+    margin: 0;
+    text-align: right;
+  }
+
+  /* Booking page: stack tent cards and make booking form mobile-friendly */
+  .main-book {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+  }
+
+  /* Tents listing: each card becomes a vertical card on mobile */
+  .bookTentsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+  .bookTentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+    padding: var(--gap-s);
+    background: var(--color-primary);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    align-items: stretch;
+  }
+  .bookTentContainer .img {
+    width: 100%;
+    order: -1;
+  }
+  .bookTentContainer .img .bookingImg {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .bookTentContainer .text {
+    width: 100%;
+  }
+  .bookTentContainer .price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap-s);
+  }
+
+  /* Booking form: full width inputs, stacked layout */
+  .booking-form {
+    width: 100%;
+    padding: var(--gap-s);
+    box-sizing: border-box;
+  }
+  .booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-s);
+  }
+  .form-row label {
+    display: block;
+    margin-bottom: var(--gap-xs);
+    font-size: var(--fs-caption);
+  }
+  input[type="date"],
+  input[type="number"],
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: calc(var(--gap-xs) + 4px);
+    font-size: var(--fs-body);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+  fieldset.extras {
+    padding: var(--gap-s);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  fieldset.extras legend {
+    font-size: var(--fs-caption);
+    margin-bottom: var(--gap-xs);
+  }
+  .extras .checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-s);
+    font-size: var(--fs-body);
+  }
+  .total-price #displayPrice {
+    font-size: var(--fs-h3);
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-s);
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+  .eventShowCase,
+  .btn {
+    min-width: auto;
+  }
+}
