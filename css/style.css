@@ -43,7 +43,7 @@
 /* Hero image section */
 .hero-image {
   width: 100%;
-  background-image: url("/img/img-1.webp");
+  background-image: url("/img/heroForside.webp");
   min-height: 600px;
   height: 600px;
 
@@ -459,8 +459,6 @@
   outline: 8px solid var(--color-silva-light);
 }
 
-
-
 .bookingImg {
   max-height: 150px;
   width: 100%;
@@ -632,4 +630,9 @@
 
 .place-media {
   width: 100%;
+}
+
+.tents {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
