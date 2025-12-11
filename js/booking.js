@@ -51,8 +51,9 @@ const seasonPrices = [
 ];
 
 function mathTotalPrice() {
-  // Info fra form
-  let checkIn = document.getElementById("checkin").value; // input er i dette format 2025-12-16
+  // Info from form
+  let checkIn = document.getElementById("checkin").value;
+  // input is in this format 2025-12-16 - yyyy-mm-dd
   let checkOut = document.getElementById("checkout").value;
   let guests = document.getElementById("guests").value;
 
