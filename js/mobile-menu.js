@@ -1,3 +1,7 @@
+// ------------------------------------------ //
+//         Copilot: Kan ses i bilag           //
+// ------------------------------------------ //
+
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.getElementById("site-nav");
   if (!nav) return;

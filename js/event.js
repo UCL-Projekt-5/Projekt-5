@@ -1,3 +1,7 @@
+// -------------------------------------- //
+//        Event oversigt KARRUSEL         //
+//                Dicte                   //
+// -------------------------------------- //
 const dates = [
   { page: 1, date: "2. Januar", time: "14:00-15:00" },
   { page: 1, date: "3. Januar", time: "14:45-16:30" },

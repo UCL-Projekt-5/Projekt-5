@@ -1,3 +1,7 @@
+// ---------------------------------------- //
+//            Booking side                  //
+//               Tiffany                    //
+// ---------------------------------------- //
 const form = document.getElementById("bookingForm");
 const displayPrice = document.getElementById("displayPrice");
 const tentContainers = document.getElementsByClassName("bookTentContainer");
